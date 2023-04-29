@@ -1,4 +1,6 @@
 @use '../../styles/_config' as *; 
+@use '../../styles/mixins' as mixins;
+
 
 .headercontainer {
     display: flex;
@@ -7,14 +9,12 @@
 
 
     border: 1px solid lightgrey;
-    padding: .3em .3em 0 .3em;
+    padding: .3em .7em 0 .3em;
     
 }
 
 .leftside {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    @include mixins.flex-center;
 
     h1 {
         color: $base-color;
@@ -23,4 +23,8 @@
 
 .header {
     font-size: 1.5rem;
+}
+
+.logo {
+    width: 2.5rem;
 }

@@ -5,7 +5,7 @@ export function Header() {
     return (
       <header className='headercontainer'>
         <div className='leftside'>
-          <img src={logo} height="45px" width="45px"></img>
+          <img src={logo} className='logo'></img>
           <h1 className='header'>Video</h1>
         </div>
         <div className='rightside'>
