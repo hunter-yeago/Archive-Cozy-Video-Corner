@@ -1,8 +1,4 @@
-// @use '../../styles/_config' as c; 
-@use 'test' as *;
-// @use 'other' as oth;
-@import 'other';
-$thing: red;
+@use '../../styles/_config' as c; 
 
 .headercontainer {
     display: flex;
@@ -10,7 +6,7 @@ $thing: red;
     align-items: center;
 
     border: 1px solid lightgrey;
-    color: other.$colorzzz;
+    color: c.$base-color;
 }
 
 .header {
