@@ -26,7 +26,8 @@
     "serverdev": "nodemon ./src/proxy",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": " sass —watch scss"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "node-sass": "^7.0.3",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "sass": "^1.62.1"
   }
 }
