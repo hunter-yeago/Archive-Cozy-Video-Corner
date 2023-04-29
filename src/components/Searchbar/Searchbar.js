@@ -17,8 +17,8 @@ export function Searchbar() {
       const response = await fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data.items);
         setVideos(data.items);
+
       })
       .catch(error => {
         console.log('error');

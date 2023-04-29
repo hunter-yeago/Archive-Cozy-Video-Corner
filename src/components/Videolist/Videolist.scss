@@ -2,4 +2,51 @@
 
 .listcontainer {
     @include mixins.flex-center;
+    flex-direction: column;
+    padding: 0 .5em;
+
+    gap: .5em;
+}
+
+.container {
+    outline: 1px solid red;
+    gap: .5em;
+    width: 100%;
+}
+
+.videodetailsdiv {
+    display: grid;
+    grid-template-rows: .3 .7;
+    flex-direction: column;
+    justify-content: flex-start;
+    // gap: 1em;
+    // outline: 1px solid green; 
+
+    p {
+        // margin: 0;
+        padding: 0;
+    }
+}
+
+.videoname {
+    margin: 0 0 .2em 0;
+    font-weight: 500;
+}
+
+.channelname {
+    margin: 0 0 1em 0;
+    font-size: .9rem;
+}
+
+.videodescription {
+    margin: 0;
+}
+
+// .rightside {
+//     padding: 0;
+//     // outline: 1px solid blue;
+// }
+
+li {
+    list-style-type: none;
 }
