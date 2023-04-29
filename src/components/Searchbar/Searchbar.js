@@ -1,4 +1,4 @@
-import VideoAnchor from "../VideoAnchor"
+import Videolist from "../Videolist/Videolist";
 import React, { useState } from 'react';
 import './Searchbar.scss';
 
@@ -8,7 +8,7 @@ export function Searchbar() {
     const [query, setQuery] = useState('');
   
     const part = 'part=snippet';
-    const maxResults = 'maxResults=1';
+    const maxResults = 'maxResults=5';
     const type = 'type=video';
   
     async function handleClick(event) {
@@ -17,7 +17,7 @@ export function Searchbar() {
       const response = await fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        console.log(data.items);
         setVideos(data.items);
       })
       .catch(error => {
@@ -39,24 +39,8 @@ export function Searchbar() {
                         <button className='submitbutton' type="submit">Search</button>
                     </div>
                 </form>
-            </div>    
-            <ul>
-                {videos.map(video => (
-                <li key={video.id.videoId}>
-                <iframe
-                    title={video.snippet.title}
-                    width="560"
-                    height="315"
-                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                    frameBorder="0"
-                    allowFullScreen
-                ></iframe>
-                <p>{video.snippet.title}</p>
-                    <VideoAnchor props={video} />
-                </li>
-                ))}
-            </ul>
-        </>
-        
+            </div>   
+            <Videolist vids={videos} />
+        </>      
     )
 }
