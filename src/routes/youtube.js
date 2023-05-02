@@ -21,6 +21,7 @@ router.get('/', cache('2 minute'), async (req, res) => {
             [API_KEY_NAME]: API_KEY_VALUE,
         })
 
+        console.log('params are ' + params);
         const apiRes = await needle('get', `${API_BASE_URL}?${params}`)
         const data = apiRes.body
 
