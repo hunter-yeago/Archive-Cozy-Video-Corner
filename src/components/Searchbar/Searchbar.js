@@ -20,10 +20,10 @@ export function Searchbar() {
       // const idurl = `/api?${id}&${idpart}&${type}`;
       // const testurl = `videos?${part}&${maxResults}&q=${query}&${type}`;
 
-      //main code
-      // const response = await fetch(url)
-      // .then(response => response.json())
-      // .then(data => {
+      //   MAIN CODE HERE
+      const response = await fetch(url)
+      .then(response => response.json())
+      .then(data => {
 
         // const videoIdentifier = data.items[0].id.videoId;
         // console.log(videoIdentifier);
@@ -41,13 +41,13 @@ export function Searchbar() {
         // })
         // console.log(data.items[0].contentDetails.duration);
 
-        //main code
-      //   console.log(data);
-      //   setVideos(data.items);
-      // })
-      // .catch(error => {
-      //   console.log('error');
-      // });
+        //   MAIN CODE HERE
+        console.log(data);
+        setVideos(data.items);
+      })
+      .catch(error => {
+        console.log('error');
+      });
       
     }
 

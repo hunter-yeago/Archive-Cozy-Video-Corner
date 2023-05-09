@@ -11,12 +11,18 @@ export function Videolist(props) {
                 <div className="container">
                     {/* <button onClick={console.log(video)}>fds</button> */}
                     <div className="videodetailsdiv">
-                        {/* <p className="videoname">{video.snippet.title}</p> */}
+
+                        
+                        <p className="videoname">{video.snippet.title}</p>
+                        <p className="channelname">{video.snippet.channelTitle}</p>
+
+                        {/* Switch to this when you run out of API calls
                         <p className="videoname"> A testing video name of a video thing</p>
-                        {/* <p className="channelname">{video.snippet.channelTitle}</p> */}
                         <p className="channelname">Channel name</p>
+                        <p className="videodescription">This is a long message of around 100 characters to show that this is the drescription of a video I found threw the API thanks you very mcuh</p> */}
+                        
                         {/* <p className="videodescription">{video.snippet.description}</p> */}
-                        <p className="videodescription">This is a long message of around 100 characters to show that this is the drescription of a video I found threw the API thanks you very mcuh</p>
+                        
                         {/* <iframe
                         title={video.snippet.title}
                         width="560"
