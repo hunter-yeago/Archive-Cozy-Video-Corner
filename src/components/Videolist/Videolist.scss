@@ -4,50 +4,47 @@
     @include mixins.flex-center;
     flex-direction: column;
     padding: 0 .5em;
-
     gap: .5em;
 }
 
-.container {
-    // @include mixins.flex-center;
-    display: grid;
-    grid-template-columns: 25% 75%;
-    outline: 1px solid red;
-    // gap: .5em;
+//Makes list items have 100% width, even if their content is minimal
+.listcontainer > div {
     width: 100%;
 }
 
-.videodetailsdiv {
+.container {
     display: grid;
-    // grid-template-rows: .3 .5 .2;
+    grid-template-columns: 25% 75%;
+    // outline: 1px solid red;
+    border: 1px solid lightgrey;
+}
+
+.videodetailsdiv {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: .5em;
-    // outline: 1px solid green; 
+    justify-content: flex-start; 
     padding: .3em;
 
     p {
+        padding: 0 .5em 0 0;
         margin: 0;
-        padding: 0;
-        width: 100%;
+        // padding: 0;
+        // width: 100%;
     }
     
     a {
-        width: 100%;
+        // width: 100%;
     }
 }
 
 .videoname {
     margin: 0 0 .5em 0;
     font-size: .8em;
-    width: 100%;
 }
 
 .channelname {
-    width: 100%;
-    margin: 0;
+    width:auto;
     font-weight: 600;
-
 }
 
 .thumbnailcontainer {
@@ -58,22 +55,18 @@
 
 .thumbnail {
     margin-top: .5em;
-    width: 90%;
+    width: 95%;
 }
 
 .videodescription {
     margin: 0;
 }
 
-.rightside {
-    padding: 0;
-    @include mixins.flex-center;
-}
+// .rightside {
+//     padding: 0;
+//     @include mixins.flex-center;
+// }
 
-.watchanchor {
-    text-align: right;
-}
+.watchanchor { text-align: right; }
 
-li {
-    list-style-type: none;
-}
+li { list-style-type: none; }
