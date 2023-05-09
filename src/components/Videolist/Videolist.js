@@ -13,8 +13,8 @@ export function Videolist(props) {
                     </div>
 
                     <div className="videodetailsdiv">
-                        <p className="channelname">{video.snippet.channelTitle}</p>
                         <p className="videoname">{video.snippet.title}</p>
+                        <p className="channelname">{video.snippet.channelTitle}</p>
                         <a className="watchanchor" key={video.id.videoId}>
                             <VideoAnchor props={video} />
                         </a>
