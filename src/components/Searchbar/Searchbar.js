@@ -9,8 +9,9 @@ export function Searchbar() {
   
     let part = 'part=snippet';
     // let idpart = 'part=snippet,contentDetails,statistics,status';
-    const maxResults = 'maxResults=1';
+    const maxResults = 'maxResults=3';
     const type = 'type=video';
+    const fields = 'fields=items%2Fsnippet%2Fthumbnails';
     // const id = 'id=8xORf5t7vXE';
   
     async function handleClick(event) {

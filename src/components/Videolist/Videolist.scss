@@ -9,43 +9,70 @@
 }
 
 .container {
+    // @include mixins.flex-center;
+    display: grid;
+    grid-template-columns: 25% 75%;
     outline: 1px solid red;
-    gap: .5em;
+    // gap: .5em;
     width: 100%;
 }
 
 .videodetailsdiv {
     display: grid;
-    grid-template-rows: .3 .7;
+    // grid-template-rows: .3 .5 .2;
     flex-direction: column;
     justify-content: flex-start;
-    // gap: 1em;
+    gap: .5em;
     // outline: 1px solid green; 
+    padding: .3em;
 
     p {
-        // margin: 0;
+        margin: 0;
         padding: 0;
+        width: 100%;
+    }
+    
+    a {
+        width: 100%;
     }
 }
 
 .videoname {
-    margin: 0 0 .2em 0;
-    font-weight: 500;
+    margin: 0 0 .5em 0;
+    font-size: .8em;
+    width: 100%;
 }
 
 .channelname {
-    margin: 0 0 1em 0;
-    font-size: .9rem;
+    width: 100%;
+    margin: 0;
+    font-weight: 600;
+
+}
+
+.thumbnailcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.thumbnail {
+    margin-top: .5em;
+    width: 90%;
 }
 
 .videodescription {
     margin: 0;
 }
 
-// .rightside {
-//     padding: 0;
-//     // outline: 1px solid blue;
-// }
+.rightside {
+    padding: 0;
+    @include mixins.flex-center;
+}
+
+.watchanchor {
+    text-align: right;
+}
 
 li {
     list-style-type: none;
