@@ -70,7 +70,8 @@
     "serverdev": "nodemon ./src/proxy",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "sass": " sass —watch scss"
+    "sass": " sass —watch scss",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
