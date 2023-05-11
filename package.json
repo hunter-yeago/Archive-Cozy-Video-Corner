@@ -73,7 +73,7 @@
     "test": "node scripts/test.js",
     "sass": " sass —watch scss",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
