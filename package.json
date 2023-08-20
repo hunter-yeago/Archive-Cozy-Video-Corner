@@ -54,6 +54,7 @@
     "react-refresh": "^0.11.0",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
+    "sass-loader": "^1  3.3.2",
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.3.1",
@@ -97,8 +98,7 @@
     "gh-pages": "^6.0.0",
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.22",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.3.2"
+    "sass": "^1.66.1"
   },
   "jest": {
     "roots": [
