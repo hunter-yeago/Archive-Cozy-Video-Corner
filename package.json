@@ -3,7 +3,6 @@
   "name": "video",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://simple-video-app-65c11037cb08.herokuapp.com",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
