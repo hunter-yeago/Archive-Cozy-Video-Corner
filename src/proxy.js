@@ -16,15 +16,6 @@ app.use('/api', require('./routes/youtube'))
 app.use(cors())
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-
-
-
-
-
-
-
-
-
 // Rate limiting
 // const limiter = rateLimit({
 //     windowMs: 10 * 60 * 1000, // 10 minutes
