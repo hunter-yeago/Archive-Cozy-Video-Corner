@@ -94,6 +94,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.22",
     "sass": "^1.62.1",

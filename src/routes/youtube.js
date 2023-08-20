@@ -14,7 +14,7 @@ const API_KEY_VALUE = process.env.API_KEY_VALUE
 let cache = apicache.middleware
 
 router.use(cors());
-router.get('/', cache('2 minute'), async (req, res) => {
+router.get('/*', cache('2 minute'), async (req, res) => {
     try {
         const params = new URLSearchParams({
             ...url.parse(req.url, true).query,
