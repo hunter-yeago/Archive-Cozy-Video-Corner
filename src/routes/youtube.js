@@ -27,15 +27,16 @@ router.get('/*', cache('2 minute'), async (req, res) => {
 
         // Log the request to the public API
 
-        if (process.env.NODE_ENV.trim() === "production") {
-            app.use(express.static("build"));
-            app.get("*", (req, res) => {
-              res.sendFile(path.resolve(__dirname,  "build", "index.html"));
-            });
-          } 
-        //   else if (process.env.NODE_ENV !== 'production') {
-        //     console.log(`REQUEST: ${API_BASE_URL}?${params}`)
-        //   }
+        console.log(process.env.NODE_ENV.trim());
+        // if (process.env.NODE_ENV.trim() === "production") {
+        //     app.use(express.static("build"));
+        //     app.get("*", (req, res) => {
+        //       res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+        //     });
+        //   } 
+        if (process.env.NODE_ENV !== 'production') {
+            console.log(`REQUEST: ${API_BASE_URL}?${params}`)
+        }
         console.log('printing data from server')
         console.log(data)
         res.status(200).json(data);

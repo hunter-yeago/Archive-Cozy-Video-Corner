@@ -25,13 +25,6 @@ export function Searchbar() {
       })
       .catch(error => {
         console.log('error');
-        console.log(error);
-        // console.log("data");
-        // console.log(data);
-        // console.log("data items");
-        // console.log(data.items);
-        console.log("response");
-        console.log(response);
       });
       
     }
