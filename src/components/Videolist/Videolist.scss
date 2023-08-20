@@ -11,7 +11,9 @@
     display: grid;
     grid-template-columns: 25% 75%;
     outline: 1px solid lightgrey;
-    width: 100%;
+    // width: 100%;
+    // max-width: 50vw;
+    width: max(50vw, 80%);
     height: fit-content;
     // max-height: 7rem;
     min-height: 5rem;
