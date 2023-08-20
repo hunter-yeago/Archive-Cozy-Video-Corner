@@ -24,9 +24,7 @@ router.get('/*', cache('2 minute'), async (req, res) => {
         })
 
         //Get data
-        // https://www.googleapis.com/youtube/v3/search
-        const apiRes = await needle('get', `https://www.googleapis.com/youtube/v3/search?${params}`)
-        // const apiRes = await needle('get', `${API_BASE_URL}?${params}`)
+        const apiRes = await needle('get', `${API_BASE_URL}?${params}`)
         const data = apiRes.body
 
         //Printing out info

@@ -6,18 +6,15 @@ require('dotenv').config()
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-//sets app to production mode
-process.env.NODE_ENV = 'production';
-
 //Sets folder
+console.log(process.env.NODE_ENV);
+
+
 if (process.env.NODE_ENV == "production") {
     app.use(express.static("build"));
-    // app.get("*", (req, res) => {
-    // res.sendFile(path.join(__dirname,  "build", "index.html"));
-    // });
-    // app.get('*', (req, res) => {
-    //     res.sendFile(path.join(__dirname+'/client/build/index.html'));
-    //   });
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname+'/build/index.html'));
+      });
 } else if (process.env.NODE_ENV !== "production") {
     app.use(express.static('public'))
 }
