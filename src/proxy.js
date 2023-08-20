@@ -6,8 +6,18 @@ require('dotenv').config()
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-//Set static folder
-app.use(express.static('public'))
+//sets app to production mode
+process.env.NODE_ENV = 'production';
+
+//Sets folder
+if (process.env.NODE_ENV == "production") {
+    app.use(express.static("build"));
+    // app.get("*", (req, res) => {
+    // res.sendFile(path.join(__dirname,  "build", "index.html"));
+    // });
+} else if (process.env.NODE_ENV !== "production") {
+    app.use(express.static('public'))
+}
 
 //Routes
 app.use('/api', require('./routes/youtube'))
@@ -15,6 +25,8 @@ app.use('/api', require('./routes/youtube'))
 // Enable cors
 app.use(cors())
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
 
 // Rate limiting
 // const limiter = rateLimit({

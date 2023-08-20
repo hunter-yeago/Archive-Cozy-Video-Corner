@@ -10,9 +10,6 @@ const API_BASE_URL = process.env.API_BASE_URL
 const API_KEY_NAME = process.env.API_KEY_NAME
 const API_KEY_VALUE = process.env.API_KEY_VALUE
 
-//sets app to production mode
-process.env.NODE_ENV = 'production';
-
 // Init cache
 let cache = apicache.middleware
 
@@ -30,16 +27,16 @@ router.get('/*', cache('2 minute'), async (req, res) => {
 
         // Log the request to the public API
 
-        console.log(process.env.NODE_ENV);
-        if (process.env.NODE_ENV === "production") {
-            app.use(express.static("build"));
-            app.get("*", (req, res) => {
-              res.sendFile(path.resolve(__dirname,  "build", "index.html"));
-            });
-          } 
-        if (process.env.NODE_ENV !== 'production') {
-            console.log(`REQUEST: ${API_BASE_URL}?${params}`)
-        }
+        // console.log(process.env.NODE_ENV);
+        // if (process.env.NODE_ENV === "production") {
+        //     app.use(express.static("build"));
+        //     app.get("*", (req, res) => {
+        //       res.sendFile(path.join(__dirname,  "build", "index.html"));
+        //     });
+        //   } 
+
+        //Printing out info
+        console.log(`REQUEST: ${API_BASE_URL}?${params}`)
         console.log('printing data from server')
         console.log(data)
         res.status(200).json(data);
