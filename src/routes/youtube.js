@@ -6,9 +6,9 @@ const apicache = require('apicache')
 const cors = require('cors');
 
 //Env vars
-// const API_BASE_URL = process.env.API_BASE_URL
-// const API_KEY_NAME = process.env.API_KEY_NAME
-// const API_KEY_VALUE = process.env.API_KEY_VALUE
+const API_BASE_URL = process.env.API_BASE_URL
+const API_KEY_NAME = process.env.API_KEY_NAME
+const API_KEY_VALUE = process.env.API_KEY_VALUE
 
 // Init cache
 let cache = apicache.middleware
@@ -27,7 +27,7 @@ router.get('/*', cache('2 minute'), async (req, res) => {
 
         // Log the request to the public API
 
-        if (process.env.NODE_ENV === "production") {
+        if (process.env.NODE_ENV.trim() === "production") {
             app.use(express.static("build"));
             app.get("*", (req, res) => {
               res.sendFile(path.resolve(__dirname,  "build", "index.html"));
