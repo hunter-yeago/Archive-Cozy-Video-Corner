@@ -16,29 +16,24 @@ let cache = apicache.middleware
 router.use(cors());
 router.get('/*', cache('2 minute'), async (req, res) => {
     try {
+
+        //set Paramaters
         const params = new URLSearchParams({
             ...url.parse(req.url, true).query,
             [API_KEY_NAME]: API_KEY_VALUE,
         })
 
-        console.log('params are ' + params);
-        const apiRes = await needle('get', `${API_BASE_URL}?${params}`)
+        //Get data
+        // https://www.googleapis.com/youtube/v3/search
+        const apiRes = await needle('get', `https://www.googleapis.com/youtube/v3/search?${params}`)
+        // const apiRes = await needle('get', `${API_BASE_URL}?${params}`)
         const data = apiRes.body
 
-        // Log the request to the public API
-
-        // console.log(process.env.NODE_ENV);
-        // if (process.env.NODE_ENV === "production") {
-        //     app.use(express.static("build"));
-        //     app.get("*", (req, res) => {
-        //       res.sendFile(path.join(__dirname,  "build", "index.html"));
-        //     });
-        //   } 
-
         //Printing out info
+        console.log('params are ' + params);
         console.log(`REQUEST: ${API_BASE_URL}?${params}`)
-        console.log('printing data from server')
-        console.log(data)
+        // console.log('printing data from server')
+        // console.log(data)
         res.status(200).json(data);
     } catch (error) {
         res.status(500).json({ error })

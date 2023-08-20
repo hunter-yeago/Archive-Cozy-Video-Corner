@@ -18,6 +18,5 @@ root.render(
 reportWebVitals();
 //test comment
 
-
 //proxy I removed in order to hopefully make heroku app deployment work
 // "proxy": "http://localhost:8080",
