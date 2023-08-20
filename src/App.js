@@ -6,7 +6,6 @@ import { Searchbar } from './components/Searchbar/Searchbar';
 function App() {
   return (
     <>
-    <p>test</p>
     <Header />
     <Searchbar />
     {/* <Videolist /> */}
