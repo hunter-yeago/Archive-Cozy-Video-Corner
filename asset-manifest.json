@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/DistractionlessVideoEnjoyment/static/css/main.17c8712b.css",
-    "main.js": "/DistractionlessVideoEnjoyment/static/js/main.ffd79d32.js",
-    "static/js/787.264cb4fb.chunk.js": "/DistractionlessVideoEnjoyment/static/js/787.264cb4fb.chunk.js",
-    "static/media/logo.svg": "/DistractionlessVideoEnjoyment/static/media/logo.ffa354cfc5fd86cbe8ab9d17c43ccba9.svg",
-    "index.html": "/DistractionlessVideoEnjoyment/index.html",
-    "main.17c8712b.css.map": "/DistractionlessVideoEnjoyment/static/css/main.17c8712b.css.map",
-    "main.ffd79d32.js.map": "/DistractionlessVideoEnjoyment/static/js/main.ffd79d32.js.map",
-    "787.264cb4fb.chunk.js.map": "/DistractionlessVideoEnjoyment/static/js/787.264cb4fb.chunk.js.map"
+    "main.css": "/Simple-Youtube/static/css/main.17c8712b.css",
+    "main.js": "/Simple-Youtube/static/js/main.76be4116.js",
+    "static/js/787.264cb4fb.chunk.js": "/Simple-Youtube/static/js/787.264cb4fb.chunk.js",
+    "static/media/logo.svg": "/Simple-Youtube/static/media/logo.ffa354cfc5fd86cbe8ab9d17c43ccba9.svg",
+    "index.html": "/Simple-Youtube/index.html",
+    "main.17c8712b.css.map": "/Simple-Youtube/static/css/main.17c8712b.css.map",
+    "main.76be4116.js.map": "/Simple-Youtube/static/js/main.76be4116.js.map",
+    "787.264cb4fb.chunk.js.map": "/Simple-Youtube/static/js/787.264cb4fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17c8712b.css",
-    "static/js/main.ffd79d32.js"
+    "static/js/main.76be4116.js"
   ]
 }
