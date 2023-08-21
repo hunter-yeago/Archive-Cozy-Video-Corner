@@ -7,18 +7,19 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 console.log("The port is :");
-console.log(process.env.PORT);
+console.log(process.env.NODE_ENV);
 console.log(PORT);
 
 //Sets folder
 if (process.env.NODE_ENV == "production") {
     app.use(express.static("build"));
-    console.log('firing');
+    console.log('setting build folder as static');
     // app.get('*', (req, res) => {
     //     res.sendFile(path.join(__dirname+'/build/index.html'));
     //   });
 } else if (process.env.NODE_ENV !== "production") {
     app.use(express.static("public"));
+    console.log('setting public folder as static');
 }
 
 //Routes

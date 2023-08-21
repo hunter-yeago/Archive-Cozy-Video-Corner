@@ -28,3 +28,7 @@ notes.txt
 
 # API
 .env
+
+# Vercel
+/vercel
+/.vercel
