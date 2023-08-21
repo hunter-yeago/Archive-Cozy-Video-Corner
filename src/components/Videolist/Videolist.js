@@ -8,9 +8,10 @@ export function Videolist(props) {
                 {props.vids.map(video => (
 
                 <div className="container">
-                    <div className="thumbnailcontainer">
+                    {/* <div className="thumbnailcontainer">
                         <img className='thumbnail' src={video.snippet.thumbnails.default.url}></img>
-                    </div>
+                    </div> */}
+                    {/* <div></div> */}
 
                     <div className="videodetailsdiv">
                         <p className="videoname">{video.snippet.title}</p>

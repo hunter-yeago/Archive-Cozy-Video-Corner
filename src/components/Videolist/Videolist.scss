@@ -1,22 +1,19 @@
 @use '../../styles/mixins' as mixins;
 
 .listcontainer {
-    @include mixins.flex-center;
-    flex-direction: column;
+    margin: 3em;
+    margin: clamp(.5em, 2vw, 3em);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 .5em;
-    gap: .5em;
+    gap: 1em;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 25% 75%;
     outline: 1px solid lightgrey;
-    // width: 100%;
-    // max-width: 50vw;
-    width: max(50vw, 80%);
-    height: fit-content;
-    // max-height: 7rem;
-    min-height: 5rem;
+    width: clamp(8em, 2vw, 10em);
+    min-height: 13rem;
 }
 
 .videodetailsdiv {
@@ -24,22 +21,16 @@
     flex-direction: column;
     justify-content: flex-start; 
     padding: .3em;
+    
 
     p {
         padding: 0 .5em 0 0;
         margin: 0;
-        // padding: 0;
-        // width: 100%;
-    }
-    
-    a {
-        // width: 100%;
     }
 }
 
 .videoname {
     margin: 0 0 .5em 0;
-    
     font-weight: 600;
 }
 
@@ -69,6 +60,6 @@
 //     @include mixins.flex-center;
 // }
 
-.watchanchor { text-align: right; }
+// .watchanchor { text-align: right; }
 
 li { list-style-type: none; }

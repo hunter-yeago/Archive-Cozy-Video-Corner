@@ -8,7 +8,7 @@ export function Searchbar() {
     const [query, setQuery] = useState('');
   
     let part = 'part=snippet';
-    const maxResults = 'maxResults=15';
+    const maxResults = 'maxResults=10';
     const type = 'type=video';
     const fields = 'fields=items%2Fsnippet%2Fthumbnails';
   
