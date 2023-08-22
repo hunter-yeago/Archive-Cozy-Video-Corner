@@ -3,12 +3,6 @@ import './Videolist.scss';
 import { connect } from "react-redux";
 export function Videolist(props) {
 
-    console.log('the props are');
-    console.log(props);
-    console.log(props.vidsAvailable);
-
-
-        console.log('if statement firing');
         return(
             <>
                 <ul className="listcontainer">
@@ -68,14 +62,8 @@ export function Videolist(props) {
 }
 
 const mapStateToProps = (state) => {
-
-    console.log('firing from mapStateToProps function');
-    console.log(state.vids);
-    console.log(state.vidsAvailable);
     return { 
         vids: state.vids,
-        canRun: state.vidsAvailable,
-
     };
   }
 

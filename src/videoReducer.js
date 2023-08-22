@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
 const initialState = {
-    url: "",
-    // The following is like that as it will render something empty on page load with VideoList
-    // vids: [ {
-    //     vids: [],
-    // }],
-    // vids: [{}],
     vidsAvailable: false,
+    // The following is like that as it will render something empty on page load with VideoList
     vids: [],
 };
 
@@ -15,9 +9,6 @@ const videoReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case 'UPDATE_VIDEOLIST':
-
-        console.log('firing from videoreducer');
-        console.log(state.vids);
             return {
                 ...state,
                 vids: [...state.vids, action.payload],
@@ -37,9 +28,13 @@ const videoReducer = (state = initialState, action) => {
             };
 
         case 'UPDATE_VIDEOS_AVAILABLE':
+            console.log('firing from update videos reducer')
+            console.log(action.payload);
+            console.log('the state is');
+            console.log(state);
             return {
                 ...state,
-                vidsAvailable: [...state.vidsAvailable, action.payload]
+                vidsAvailable: action.payload
             }
 
         default:

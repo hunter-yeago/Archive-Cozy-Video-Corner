@@ -1,31 +1,21 @@
-import Videolist from "../Videolist/Videolist";
 import React, { useState } from 'react';
 import './Searchbar.scss';
 
-
 // Importing the updateVideolist action will allow us to update the VideoList
 import { updateVideoList, updateVideoListAvailability} from "../../actions";
-// useRef allows us to obtain a reference to HTML elements.
-import { useRef } from "react";
 // useDispatch allows us to dispatch our updateVideoList action
 import { useDispatch } from "react-redux";
 
-
 export function Searchbar() {
 
-    const [videos, setVideos] = useState([]);
     const [query, setQuery] = useState('');
-    const [vidsAvailable, setVidsAvailable] = useState(false);
-
     const dispatch = useDispatch();
-    const inputRef = useRef(null);
   
     let part = 'part=snippet';
     const maxResults = 'maxResults=2';
     const type = 'type=video';
     const fields = 'fields=items%2Fsnippet%2Fthumbnails';
 
-  
     async function handleClick(event) {
       event.preventDefault();
 
@@ -34,10 +24,7 @@ export function Searchbar() {
       const response = await fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        setVideos(data.items);
-        setVidsAvailable(true);
-        updateVideoListAvailability(true);
+        dispatch(updateVideoListAvailability(true));
         dispatch(updateVideoList(data.items));
       })
       .catch(error => {
@@ -50,39 +37,23 @@ export function Searchbar() {
       setQuery(event.target.value);
     }
 
-    if (!vidsAvailable) {
-      return (
+    return (
       <>
-        <div className="formcontainer">
-            <form onSubmit={handleClick}>
-                <div className='innercontainer'>
-                    <input type="text" name='searchinput' placeholder='Funny Cat Videos' className='videoinput' value={query} onChange={handleInputChange} />
-                    <button className='submitbutton' type="submit">Search</button>
-                </div>
-            </form>
-        </div>
-      </>  
-      )
-    }
-    else {
-      return (
-        <>
-        <div className="formcontainer">
-            <form onSubmit={handleClick}>
-                <div className='innercontainer'>
-                    <input type="text" name='searchinput' placeholder='Funny Cat Videos' className='videoinput' value={query} onChange={handleInputChange} />
-                    <button className='submitbutton' type="submit">Search</button>
-                </div>
-            </form>
-        </div>   
-        <Videolist />
-      </>    
-      )
-    }
+      <div className="formcontainer">
+          <form onSubmit={handleClick}>
+              <div className='innercontainer'>
+                  <input type="text" name='searchinput' placeholder='Funny Cat Videos' className='videoinput' value={query} onChange={handleInputChange} />
+                  <button className='submitbutton' type="submit">Search</button>
+              </div>
+          </form>
+      </div>
+    </>    
+    )
+  }
 
-}
+export default Searchbar;
 
-
+  //old code where I attempted to get access to the video length
 
     // let idpart = 'part=snippet,contentDetails,statistics,status';
     // const id = 'id=8xORf5t7vXE';

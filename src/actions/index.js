@@ -13,9 +13,6 @@ export const showVideo = (video) => {
 
 //Stores the new URL in State Management
 export const updateVideoList = (newVids) => {
-    
-    console.log('firing from actions');
-    console.log(newVids);
 
     return {
         type: "UPDATE_VIDEOLIST",
@@ -27,6 +24,8 @@ export const updateVideoList = (newVids) => {
 
 export const updateVideoListAvailability = (availability) => {
     
+    console.log('firing from update vidoe action');
+    console.log(availability);
     return {
         type: "UPDATE_VIDEOS_AVAILABLE",
         payload: {
