@@ -1,16 +1,12 @@
 import './Sidebar.scss';
 import { connect } from 'react-redux';
-// import React, { useState } from 'react';
-import Videolist from "../Videolist/Videolist";
+import Videolist from '../Videolist/Videolist';
 import Searchbar from '../Searchbar/Searchbar';
-import React, { useState } from 'react';
-
-import { useDispatch } from "react-redux";
+import { useState } from 'react';
 
 export function Sidebar(props) {
 
     const [windowVisibility, setVisibility] = useState("displaypanel");
-    const dispatch = useDispatch();
 
     function handleSearchToggle() {
         if (windowVisibility === "displaypanel") {
@@ -36,7 +32,6 @@ export function Sidebar(props) {
                 </div>
             </div>
         </>   
-        
     )
    } else {
     return (
@@ -56,7 +51,6 @@ export function Sidebar(props) {
         </>   
     )
    }
-
 }
 
 // The problem was I messed up me exports / imports... always double check that!
