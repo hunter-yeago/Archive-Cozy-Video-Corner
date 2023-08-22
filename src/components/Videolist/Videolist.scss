@@ -4,16 +4,17 @@
     margin: 3em;
     margin: clamp(.5em, 2vw, 3em);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 .5em;
+    flex-direction: column;
+    padding: .5em;
     gap: 1em;
+    max-width: 40vw;
+    outline: 1px solid green;
 }
 
 .container {
     outline: 1px solid lightgrey;
-    width: clamp(8em, 2vw, 10em);
-    min-height: 13rem;
+    // width: clamp(8em, 2vw, 10em);
+    height: 5rem;
 }
 
 .videodetailsdiv {
