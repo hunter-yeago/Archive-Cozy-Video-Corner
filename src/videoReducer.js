@@ -2,6 +2,7 @@ const initialState = {
     vidsAvailable: false,
     // The following is like that as it will render something empty on page load with VideoList
     vids: [],
+    windowIsVisible: true,
 };
 
 const videoReducer = (state = initialState, action) => {
@@ -28,10 +29,6 @@ const videoReducer = (state = initialState, action) => {
             };
 
         case 'UPDATE_VIDEOS_AVAILABLE':
-            console.log('firing from update videos reducer')
-            console.log(action.payload);
-            console.log('the state is');
-            console.log(state);
             return {
                 ...state,
                 vidsAvailable: action.payload

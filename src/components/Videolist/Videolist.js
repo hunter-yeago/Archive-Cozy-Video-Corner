@@ -16,9 +16,11 @@ export function Videolist(props) {
                         <div className="videodetailsdiv">
                             <p className="videoname">{video.snippet.title}</p>
                             <p className="channelname">{video.snippet.channelTitle}</p>
-                            <a className="watchanchor" key={video.id.videoId}>
+                            {/* Commented / Deleted this anchor because of error warning 
+                            that i cannot nest multiple anchors */}
+                            {/* <a className="watchanchor" key={video.id.videoId}> */}
                                 <VideoAnchor props={video} />
-                            </a>
+                            {/* </a> */}
                             
                             
                             {/* <p className="videodescription">{video.snippet.description}</p> */}

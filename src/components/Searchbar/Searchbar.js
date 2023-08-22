@@ -12,7 +12,7 @@ export function Searchbar() {
     const dispatch = useDispatch();
   
     let part = 'part=snippet';
-    const maxResults = 'maxResults=2';
+    const maxResults = 'maxResults=1';
     const type = 'type=video';
     const fields = 'fields=items%2Fsnippet%2Fthumbnails';
 

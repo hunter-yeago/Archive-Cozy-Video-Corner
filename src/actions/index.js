@@ -24,8 +24,6 @@ export const updateVideoList = (newVids) => {
 
 export const updateVideoListAvailability = (availability) => {
     
-    console.log('firing from update vidoe action');
-    console.log(availability);
     return {
         type: "UPDATE_VIDEOS_AVAILABLE",
         payload: {
@@ -49,6 +47,16 @@ export const removeVideolist = (videos) => {
         type: "REMOVE_VIDEOLIST",
         payload: {
             vids: videos,
+        },
+    };
+};
+
+export const updateSidePanelVisibility = (visibility) => {
+    
+    return {
+        type: "UPDATE_VIDEO_URL",
+        payload: {
+            // newUrl: url,
         },
     };
 };
