@@ -49,9 +49,9 @@ export function Sidebar(props) {
             <div className={windowVisibility}>
             <Searchbar />
             
-            <div class="innervideolistdiv" >
+            <div className="innervideolistdiv" >
             
-            <div class="marginvideolistdiv" ><Videolist /></div>
+            <div className="marginvideolistdiv" ><Videolist /></div>
             </div>
 
 

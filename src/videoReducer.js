@@ -10,9 +10,11 @@ const videoReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case 'UPDATE_VIDEOLIST':
+            console.log('firing from reducer');
             return {
                 ...state,
-                vids: [...state.vids, action.payload],
+                // vids: [...state.vids, action.payload],
+                vids: action.payload,
             };
 
 

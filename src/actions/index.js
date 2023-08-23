@@ -13,7 +13,7 @@ export const showVideo = (video) => {
 
 //Stores the new URL in State Management
 export const updateVideoList = (newVids) => {
-
+    console.log('firing upate video list action');
     return {
         type: "UPDATE_VIDEOLIST",
         payload: {

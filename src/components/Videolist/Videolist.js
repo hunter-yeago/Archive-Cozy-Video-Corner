@@ -3,10 +3,12 @@ import './Videolist.scss';
 import { connect } from "react-redux";
 export function Videolist(props) {
 
+    console.log('video list being fired');
+    console.log(props);
         return(
             <>
                 <ul className="listcontainer">
-                    { props.vids[0].vids.map(video => (
+                    { props.vids.vids.map(video => (
     
                     <div className="container">
                         {/* <div className="thumbnailcontainer">

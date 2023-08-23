@@ -8,7 +8,7 @@ export function Videodisplay(props) {
         return(
             <>
                 {/* Will eventually switch this to just the one chosen video */}
-                { props.vids[0].vids.map(video => (
+                { props.vids.vids.map(video => (
                     <div className='shelf'>
                         {/* <h1> Your Cozy Corner Viewing Area</h1> */}
                         <div className="videocontainer">
@@ -31,6 +31,7 @@ export function Videodisplay(props) {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return { 
         vids: state.vids,
         avail: state.vidsAvailable
