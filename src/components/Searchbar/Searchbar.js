@@ -26,8 +26,8 @@ export function Searchbar() {
       .then(data => {
         dispatch(updateVideoListAvailability(true));
         dispatch(updateVideoList(data.items));
-        console.log('firing from searchbar');
-        console.log(data.items);
+        // console.log('firing from searchbar');
+        // console.log(data.items);
       })
       .catch(error => {
         console.log('error:');

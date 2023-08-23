@@ -1,9 +1,10 @@
 const initialState = {
-    vidsAvailable: false,
+    displayVideoAvailable: false,
+    videoListAvailable: false,
     // The following is like that as it will render something empty on page load with VideoList
     vids: [],
     windowIsVisible: true,
-    displayVideo: {},
+    // displayVideo: {},
 };
 
 const videoReducer = (state = initialState, action) => {
@@ -11,6 +12,7 @@ const videoReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case 'UPDATE_VIDEOLIST':
+            // console.log('firing in video update list reducer');
             return {
                 ...state,
                 // vids: [...state.vids, action.payload],
@@ -18,30 +20,36 @@ const videoReducer = (state = initialState, action) => {
             };
 
         case 'UPDATE_VIDEO_DISPLAY':
-            console.log('firing in video update diaply reducer');
+            // console.log('firing in video update diaply reducer');
             return {
                 ...state,
-                vids: action.payload,
+                displayVideo: action.payload,
+            }
+        case 'UPDATE_VIDEO_LIST_AVAILABLE':
+            return {
+                ...state,
+                videoListAvailable: action.payload
             }
 
-
-        case 'REMOVE_VIDEOLIST':
+        case 'UPDATE_DISPLAY_VIDEO_AVAILABILITY':
             return {
                 ...state,
-                videos: state.videos.filter(video => video.id !==action.payload)
-            };
-
-        case 'SHOW_VIDEO':
-            return {
-                ...state,
-                videos: [...state.video, action.payload]
-            };
-
-        case 'UPDATE_VIDEOS_AVAILABLE':
-            return {
-                ...state,
-                vidsAvailable: action.payload
+                displayVideoAvailable: action.payload
             }
+
+        // case 'REMOVE_VIDEOLIST':
+        //     return {
+        //         ...state,
+        //         videos: state.videos.filter(video => video.id !==action.payload)
+        //     };
+
+        // case 'SHOW_VIDEO':
+        //     return {
+        //         ...state,
+        //         videos: [...state.video, action.payload]
+        //     };
+
+
 
         default:
             return state;

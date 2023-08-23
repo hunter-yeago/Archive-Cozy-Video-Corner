@@ -2,11 +2,10 @@ import './Videodisplay.scss';
 import { connect } from "react-redux";
 export function Videodisplay(props) {
 
-    console.log('firing from video display main function');
-    console.log(props);
-    if (!props.avail) {
-        <></>
-    } else {
+    // console.log('firing from video display main function');
+    // console.log(props);
+    if (!props.avail) { return (<></>)} 
+    else {
         return(
             <>
                 {/* Will eventually switch this to just the one chosen video */}
@@ -15,8 +14,8 @@ export function Videodisplay(props) {
                         <div className="videocontainer">
                         {/* The Video */}
                         {<iframe className='videoplayer'
-                                    title={props.video.snippet.title}
-                                    src={`https://www.youtube.com/embed/${props.video.id.videoId}`}
+                                    title={props.video.vid.snippet.title}
+                                    src={`https://www.youtube.com/embed/${props.video.vid.id.videoId}`}
                                     allow="fullscreen"
                                     loading="lazy"
                             ></iframe>}
@@ -48,9 +47,9 @@ export function Videodisplay(props) {
 }
 
 const mapStateToProps = (state) => {
-    console.log('firing from mapstatetoprops function in video display component');
     return { 
         video: state.displayVideo,
+        avail: state.displayVideoAvailable
     };
   }
 

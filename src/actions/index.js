@@ -13,7 +13,7 @@ export const showVideo = (video) => {
 
 //Stores the new URL in State Management
 export const updateVideoList = (newVids) => {
-    console.log('firing upate video list action');
+    // console.log('firing upate video list action');
     return {
         type: "UPDATE_VIDEOLIST",
         payload: {
@@ -23,6 +23,7 @@ export const updateVideoList = (newVids) => {
 };
 
 export const updateVideoDisplay = (video) => {
+    // console.log('firing upate video display action');
     return {
         type: 'UPDATE_VIDEO_DISPLAY',
         payload: {
@@ -31,12 +32,22 @@ export const updateVideoDisplay = (video) => {
     };
 };
 
+export const updateDisplayVideoAvailability = (availability) => {
+    
+    return {
+        type: "UPDATE_DISPLAY_VIDEO_AVAILABILITY",
+        payload: {
+            displayVideoAvailable: availability,
+        },
+    };
+};
+
 export const updateVideoListAvailability = (availability) => {
     
     return {
-        type: "UPDATE_VIDEOS_AVAILABLE",
+        type: "UPDATE_VIDEO_LIST_AVAILABLE",
         payload: {
-            vidsAvailable: availability,
+            videoListAvailable: availability,
         },
     };
 };
