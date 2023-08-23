@@ -27,11 +27,6 @@ router.get('/*', cache('2 minute'), async (req, res) => {
         const apiRes = await needle('get', `${API_BASE_URL}?${params}`)
         const data = apiRes.body
 
-        //Printing out info
-        console.log('params are ' + params);
-        console.log(`REQUEST: ${API_BASE_URL}?${params}`)
-        // console.log('printing data from server')
-        // console.log(data)
         res.status(200).json(data);
     } catch (error) {
         res.status(500).json({ error })

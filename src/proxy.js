@@ -6,10 +6,6 @@ require('dotenv').config()
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-console.log("The port is :");
-console.log(process.env.NODE_ENV);
-console.log(PORT);
-
 //Sets folder
 if (process.env.NODE_ENV == "production") {
     app.use(express.static("build"));
