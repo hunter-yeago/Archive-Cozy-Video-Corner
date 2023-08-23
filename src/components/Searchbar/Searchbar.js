@@ -10,9 +10,16 @@ export function Searchbar() {
 
     const [query, setQuery] = useState('');
     const dispatch = useDispatch();
+
+    function replaceASCII(video) {
+      video.snippet.title = video.snippet.title.replaceAll('&amp;', '&');
+      video.snippet.title = video.snippet.title.replaceAll('&#39;', '\'');
+      video.snippet.title = video.snippet.title.replaceAll('&quot;', '\"');
+      return video;
+    }
   
     let part = 'part=snippet';
-    const maxResults = 'maxResults=3';
+    const maxResults = 'maxResults=10';
     const type = 'type=video';
     const fields = 'fields=items%2Fsnippet%2Fthumbnails';
 
@@ -24,10 +31,12 @@ export function Searchbar() {
       const response = await fetch(url)
       .then(response => response.json())
       .then(data => {
+        data.items.forEach((video) => {
+          video = replaceASCII(video);
+        });
         dispatch(updateVideoListAvailability(true));
         dispatch(updateVideoList(data.items));
-        // console.log('firing from searchbar');
-        // console.log(data.items);
+        console.log(data.items);
       })
       .catch(error => {
         console.log('error:');

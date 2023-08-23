@@ -3,12 +3,15 @@ import './Videolist.scss';
 import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
 import {updateVideoDisplay, updateDisplayVideoAvailability} from "../../actions";
+import { useEffect } from "react";
 export function Videolist(props) {
 
     const dispatch = useDispatch();
     // console.log('firing from videolist main');
-    // console.log(props);
-    // console.log(props.vids.vids);
+    console.log(props);
+    console.log(props.vids.vids);
+
+    
 
     function displayVideo(video) {
         // console.log('firing display video function');
@@ -27,11 +30,18 @@ export function Videolist(props) {
                         </div> */}
     
                         <div className="videodetailsdiv">
-                            <p className="videoname">{video.snippet.title}</p>
-                            <p className="channelname">{video.snippet.channelTitle}</p>
+                            <div className="videonamediv">
+                                <h1 className="videoname">{video.snippet.title}</h1>
+                            </div>
+                            
+                            <div className="channelnamediv">
+                                <p className="channelname">{video.snippet.channelTitle}</p>
+                            </div>
+                        </div>
+                            {/* <p className="channeldescription"></p> */}
+                            <p className="videodescription">{video.snippet.description}</p>
                             
                             
-                            {/* <p className="videodescription">{video.snippet.description}</p> */}
     
                             {/* Switch to this when you run out of API calls */}
                             {/* <p className="videoname"> A testing video name of a video thing</p>
@@ -45,7 +55,7 @@ export function Videolist(props) {
                             {/* Buttons to send info to console */}
                             {/* <button onClick={console.log(video.snippet.thumbnails)}>Button</button> */}
                             {/* <button onClick={console.log(Object.keys(video.snippet))}>click</button> */}
-                        </div>
+                        
                         
                     </button>
                     ))}

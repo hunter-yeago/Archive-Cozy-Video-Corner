@@ -6,11 +6,11 @@
     flex-direction: column;
     padding: .5em;
     gap: 1em;
-    max-width: 40vw;
-    // outline: 1px solid green;
-
     position: relative;
 
+    //this was my first idea to get everything to shrink automatically
+    //as the viewport gets smaller but there's gotta be a better way
+    // max-width: 40vw;
 }
 
 .container {
@@ -18,14 +18,15 @@
     // width: clamp(8em, 2vw, 10em);
     min-height: 5rem;
     display: flex;
+    gap: .1em;
     //This makes it so that all results start from the left side, regardless of amount of text
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    // flex-flow: row-reverse;
+    flex-direction: column;
+    justify-content: flex-start;
     text-decoration: none;
     border: none;
     background: transparent;
     border: 1px solid transparent;
+    color: white;
 }
 
 .container:hover {
@@ -33,8 +34,8 @@
 }
 
 .videodetailsdiv {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 75% 25%;
     justify-content: flex-start; 
     padding: .3em;
     
@@ -48,11 +49,32 @@
 .videoname {
     margin: 0 0 .5em 0;
     font-weight: 600;
+    font-size: 1rem;
+    
+}
+
+.videonamediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
 }
 
 .channelname {
     width:auto;
-    font-size: .8em;
+    // font-size: .8em;
+    font-weight: 600;
+    // border-left: 3px solid white;
+    // border-left-style: dotted;
+    text-align: center;
+}
+
+.channelnamediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border-left: 1px solid white;
+    text-align: center;
 }
 
 .thumbnailcontainer {
