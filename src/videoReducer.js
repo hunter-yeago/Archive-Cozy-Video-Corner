@@ -3,6 +3,7 @@ const initialState = {
     // The following is like that as it will render something empty on page load with VideoList
     vids: [],
     windowIsVisible: true,
+    displayVideo: {},
 };
 
 const videoReducer = (state = initialState, action) => {
@@ -10,12 +11,18 @@ const videoReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case 'UPDATE_VIDEOLIST':
-            console.log('firing from reducer');
             return {
                 ...state,
                 // vids: [...state.vids, action.payload],
                 vids: action.payload,
             };
+
+        case 'UPDATE_VIDEO_DISPLAY':
+            console.log('firing in video update diaply reducer');
+            return {
+                ...state,
+                vids: action.payload,
+            }
 
 
         case 'REMOVE_VIDEOLIST':

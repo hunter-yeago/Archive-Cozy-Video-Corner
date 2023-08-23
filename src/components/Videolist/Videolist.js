@@ -1,16 +1,26 @@
 import VideoAnchor from "../VideoAnchor";
 import './Videolist.scss';
 import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
+import {updateVideoDisplay} from "../../actions";
 export function Videolist(props) {
 
-    console.log('video list being fired');
-    console.log(props);
+    const dispatch = useDispatch();
+
+    function displayVideo(v) {
+        console.log('firing display video function');
+        dispatch(updateVideoDisplay(v));
+    }
+
+    console.log('here are the vids');
+    console.log(props.vids.vids);
+
         return(
             <>
                 <ul className="listcontainer">
                     { props.vids.vids.map(video => (
     
-                    <div className="container">
+                    <button onClick={displayVideo} className="container">
                         {/* <div className="thumbnailcontainer">
                             <img className='thumbnail' src={video.snippet.thumbnails.default.url}></img>
                         </div> */}
@@ -57,7 +67,7 @@ export function Videolist(props) {
                             </p>
                         </div> */}
                         
-                    </div>
+                    </button>
                     ))}
                 </ul>
             </>

@@ -2,39 +2,55 @@ import './Videodisplay.scss';
 import { connect } from "react-redux";
 export function Videodisplay(props) {
 
+    console.log('firing from video display main function');
+    console.log(props);
     if (!props.avail) {
         <></>
     } else {
         return(
             <>
                 {/* Will eventually switch this to just the one chosen video */}
-                { props.vids.vids.map(video => (
+                {/* { props.vids.map(video => ( */}
                     <div className='shelf'>
-                        {/* <h1> Your Cozy Corner Viewing Area</h1> */}
                         <div className="videocontainer">
                         {/* The Video */}
                         {<iframe className='videoplayer'
-                                    title={video.snippet.title}
-                                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                                    title={props.video.snippet.title}
+                                    src={`https://www.youtube.com/embed/${props.video.id.videoId}`}
                                     allow="fullscreen"
                                     loading="lazy"
                             ></iframe>}
                         {/* Description */}
                         {/* <li>{video.snippet.description}</li> */}
-                </div>
-                    </div>
+                     </div>
+                        </div>
                 
-                ))}
+                {/* ))} */}
+                
+                {/* { props.vids.vids.map(video => (
+                    <div className='shelf'>
+                        <div className="videocontainer"> */}
+                        {/* The Video */}
+                        {/* {<iframe className='videoplayer'
+                                    title={video.snippet.title}
+                                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                                    allow="fullscreen"
+                                    loading="lazy"
+                            ></iframe>} */}
+                        {/* Description */}
+                        {/* <li>{video.snippet.description}</li> */}
+                     {/* </div>
+                        </div>
+                ))} */}
             </>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
+    console.log('firing from mapstatetoprops function in video display component');
     return { 
-        vids: state.vids,
-        avail: state.vidsAvailable
+        video: state.displayVideo,
     };
   }
 

@@ -22,6 +22,15 @@ export const updateVideoList = (newVids) => {
     };
 };
 
+export const updateVideoDisplay = (video) => {
+    return {
+        type: 'UPDATE_VIDEO_DISPLAY',
+        payload: {
+            vid: video,
+        },
+    };
+};
+
 export const updateVideoListAvailability = (availability) => {
     
     return {

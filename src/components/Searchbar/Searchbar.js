@@ -12,7 +12,7 @@ export function Searchbar() {
     const dispatch = useDispatch();
   
     let part = 'part=snippet';
-    const maxResults = 'maxResults=1';
+    const maxResults = 'maxResults=3';
     const type = 'type=video';
     const fields = 'fields=items%2Fsnippet%2Fthumbnails';
 
@@ -26,6 +26,8 @@ export function Searchbar() {
       .then(data => {
         dispatch(updateVideoListAvailability(true));
         dispatch(updateVideoList(data.items));
+        console.log('firing from searchbar');
+        console.log(data.items);
       })
       .catch(error => {
         console.log('error:');
