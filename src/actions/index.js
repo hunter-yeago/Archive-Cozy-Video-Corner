@@ -13,7 +13,11 @@ export const showVideo = (video) => {
 
 //Stores the new URL in State Management
 export const updateVideoList = (newVids) => {
+<<<<<<< HEAD
     // console.log('firing upate video list action');
+=======
+    console.log('firing upate video list action');
+>>>>>>> 85a66d8... fixed bug where it wouldn't change the video after the first search - issue was that it would keep storing new states as new objects rather than overwrigin the first one
     return {
         type: "UPDATE_VIDEOLIST",
         payload: {

@@ -6,6 +6,7 @@ import {updateVideoDisplay, updateDisplayVideoAvailability} from "../../actions"
 import { useEffect } from "react";
 export function Videolist(props) {
 
+<<<<<<< HEAD
     const dispatch = useDispatch();
     // console.log('firing from videolist main');
     console.log(props);
@@ -19,6 +20,10 @@ export function Videolist(props) {
         dispatch(updateDisplayVideoAvailability(true));
     }
 
+=======
+    console.log('video list being fired');
+    console.log(props);
+>>>>>>> 85a66d8... fixed bug where it wouldn't change the video after the first search - issue was that it would keep storing new states as new objects rather than overwrigin the first one
         return(
             <>
                 <ul className="listcontainer">

@@ -10,6 +10,7 @@ export function Videodisplay(props) {
             <>
                 {/* Will eventually switch this to just the one chosen video */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {/* { props.vids.map(video => ( */}
                     <div className='shelf'>
                         <div className="videocontainer">
@@ -34,6 +35,9 @@ export function Videodisplay(props) {
                         {/* {<iframe className='videoplayer'
 =======
                 { props.vids[0].vids.map(video => (
+=======
+                { props.vids.vids.map(video => (
+>>>>>>> 85a66d8... fixed bug where it wouldn't change the video after the first search - issue was that it would keep storing new states as new objects rather than overwrigin the first one
                     <div className='shelf'>
                         {/* <h1> Your Cozy Corner Viewing Area</h1> */}
                         <div className="videocontainer">
@@ -66,6 +70,7 @@ export function Videodisplay(props) {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return { 
         video: state.displayVideo,
         avail: state.displayVideoAvailable

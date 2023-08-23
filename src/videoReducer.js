@@ -12,7 +12,11 @@ const videoReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case 'UPDATE_VIDEOLIST':
+<<<<<<< HEAD
             // console.log('firing in video update list reducer');
+=======
+            console.log('firing from reducer');
+>>>>>>> 85a66d8... fixed bug where it wouldn't change the video after the first search - issue was that it would keep storing new states as new objects rather than overwrigin the first one
             return {
                 ...state,
                 // vids: [...state.vids, action.payload],

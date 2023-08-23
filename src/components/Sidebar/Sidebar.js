@@ -54,6 +54,7 @@ export function Sidebar(props) {
             <Searchbar />
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="innervideolistdiv" >
             
             <div className="marginvideolistdiv" ><Videolist /></div>
@@ -62,6 +63,11 @@ export function Sidebar(props) {
             
             <div class="marginvideolistdiv" ><Videolist /></div>
 >>>>>>> 4a24c6c... created better designing of the design
+=======
+            <div className="innervideolistdiv" >
+            
+            <div className="marginvideolistdiv" ><Videolist /></div>
+>>>>>>> 85a66d8... fixed bug where it wouldn't change the video after the first search - issue was that it would keep storing new states as new objects rather than overwrigin the first one
             </div>
 
 
