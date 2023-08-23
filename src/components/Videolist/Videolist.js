@@ -31,8 +31,6 @@ export function Videolist(props) {
     
                         {/* //test div */}
                         <div></div>
-                        {/* //test div */}
-                        <div></div>
                         
                         <div className="videodetailsdiv">
                             <div className="videonamediv">

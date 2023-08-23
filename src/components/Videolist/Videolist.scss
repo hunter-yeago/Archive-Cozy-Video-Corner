@@ -6,11 +6,18 @@
     flex-direction: column;
     padding: .5em;
     gap: 1em;
+<<<<<<< HEAD
     position: relative;
 
     //this was my first idea to get everything to shrink automatically
     //as the viewport gets smaller but there's gotta be a better way
     // max-width: 40vw;
+=======
+    max-width: 40vw;
+    // outline: 1px solid green;
+
+    position: relative;
+>>>>>>> 4a24c6c... created better designing of the design
 }
 
 .container {
@@ -18,6 +25,7 @@
     // width: clamp(8em, 2vw, 10em);
     min-height: 5rem;
     display: flex;
+<<<<<<< HEAD
     gap: .1em;
     //This makes it so that all results start from the left side, regardless of amount of text
     flex-direction: column;
@@ -31,6 +39,12 @@
 
 .container:hover {
     outline: 1px solid lightcoral;
+=======
+    //This makes it so that all results start from the left side, regardless of amount of text
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // flex-flow: row-reverse;
+>>>>>>> 4a24c6c... created better designing of the design
 }
 
 .videodetailsdiv {
