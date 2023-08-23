@@ -3,9 +3,8 @@
 .formcontainer {
 
   @include mixins.flex-center;
-    outline: 1px solid skyblue;
     padding: .5em 0;
-
+    border-bottom: 1px solid black;
 }
 
 .innercontainer {

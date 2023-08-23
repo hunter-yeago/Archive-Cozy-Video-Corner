@@ -7,22 +7,24 @@ export function Videodisplay(props) {
     } else {
         return(
             <>
-            {/* Will eventually switch this to just the one chosen video */}
-                        { props.vids[0].vids.map(video => (
-                        <div className="container">
-                                {/* The Video */}
-                                {<iframe
-                                            title={video.snippet.title}
-                                            width="560"
-                                            height="315"
-                                            src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                                            frameBorder="0"
-                                            allowFullScreen
-                                    ></iframe>}
-                                {/* Description */}
-                                <li>{video.snippet.description}</li>
-                        </div>
-                        ))}
+                {/* Will eventually switch this to just the one chosen video */}
+                { props.vids[0].vids.map(video => (
+                    <div className='shelf'>
+                        {/* <h1> Your Cozy Corner Viewing Area</h1> */}
+                        <div className="videocontainer">
+                        {/* The Video */}
+                        {<iframe className='videoplayer'
+                                    title={video.snippet.title}
+                                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                                    allow="fullscreen"
+                                    loading="lazy"
+                            ></iframe>}
+                        {/* Description */}
+                        {/* <li>{video.snippet.description}</li> */}
+                </div>
+                    </div>
+                
+                ))}
             </>
         )
     }

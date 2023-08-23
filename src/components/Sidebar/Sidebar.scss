@@ -1,30 +1,67 @@
 
+@use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
 
+// Left side panel with buttons
 .outerverticalcontainer {
-    height: 70vh;
+    height: 80vh;
     width: 3rem;
     border-radius: 5px;
-    outline: 1px solid black;
+    outline: 1px solid red;
     position: fixed;
-    top: 4.3rem;
+    top: 6.3rem;
     left: 2rem;
+    background-color: config.$maincolor;
+    display: flex;
+    flex-direction: column;
 }
 
+.barbutton, .barbutton:focus {
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: .5em;
+}
+
+.barbutton:hover {
+    background-color: rgb(rgb(255, 255, 255), .7);
+}
+
+.innervideolistdiv {
+    //These two settings allow for scrolling
+    //More info: https://stackoverflow.com/questions/9811465/scrollable-div-inside-container
+    max-height:100%;
+    overflow:auto;
+    margin-bottom: 50rem;
+}
+
+.marginvideolistdiv {
+    //This allows there to be extra room on the bottom
+    //More info: https://stackoverflow.com/questions/9811465/scrollable-div-inside-container
+    margin-bottom: 4em;
+}
+
+//Right side panel where things are displayed
 .displaypanel {
-    height: 70vh;
+    height: 80vh;
     width: 30rem;
     border-radius: 5px;
     outline: 1px solid black;
     position: fixed;
-    top: 4.3rem;
+    top: 6.3rem;
     left: 5.5rem;
     display: block;
+    background-color: config.$maincolor;
+    color: white;
+    overflow: hidden;
+
+    a {
+        color: white;
+    }
 }
 
 .hiddenpanel {
     display: none;
-}
-
-button {
-    width: 100%;
 }

@@ -1,20 +1,26 @@
 @use '../../styles/mixins' as mixins;
 
 .listcontainer {
-    margin: 3em;
-    margin: clamp(.5em, 2vw, 3em);
+    margin: clamp(.5em, 2vw, 1em);
     display: flex;
     flex-direction: column;
     padding: .5em;
     gap: 1em;
     max-width: 40vw;
-    outline: 1px solid green;
+    // outline: 1px solid green;
+
+    position: relative;
 }
 
 .container {
     outline: 1px solid lightgrey;
     // width: clamp(8em, 2vw, 10em);
-    height: 5rem;
+    min-height: 5rem;
+    display: flex;
+    //This makes it so that all results start from the left side, regardless of amount of text
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // flex-flow: row-reverse;
 }
 
 .videodetailsdiv {
