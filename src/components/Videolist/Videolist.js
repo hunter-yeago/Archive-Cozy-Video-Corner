@@ -29,6 +29,8 @@ export function Videolist(props) {
                             <img className='thumbnail' src={video.snippet.thumbnails.default.url}></img>
                         </div> */}
     
+                        {/* //test div */}
+                        <div></div>
                         <div className="videodetailsdiv">
                             <div className="videonamediv">
                                 <h1 className="videoname">{video.snippet.title}</h1>
