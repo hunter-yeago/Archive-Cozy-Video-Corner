@@ -16,32 +16,32 @@
 .container {
     outline: 1px solid lightgrey;
     // width: clamp(8em, 2vw, 10em);
-    min-height: 5rem;
+    min-height: 7rem;
     display: flex;
-    gap: .1em;
-    //This makes it so that all results start from the left side, regardless of amount of text
+    gap: .2em;
     flex-direction: column;
-    justify-content: flex-start;
-    text-decoration: none;
-    border: none;
-    background: transparent;
     border: 1px solid transparent;
     color: white;
+    // background-color: rgb(28, 72, 88);
+    background-color: #714b3c;
+    border-radius: 5px;
+    padding: .5em;
 }
 
 .container:hover {
-    outline: 1px solid lightcoral;
+    outline: 2px solid #ffc7b0;
 }
 
 .videodetailsdiv {
     display: grid;
     grid-template-columns: 75% 25%;
-    justify-content: flex-start; 
-    padding: .3em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
     
 
     p {
-        padding: 0 .5em 0 0;
+        padding: 0;
         margin: 0;
     }
 }
@@ -54,27 +54,17 @@
 }
 
 .videonamediv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-right: 1px solid white;
 }
 
 .channelname {
-    width:auto;
-    // font-size: .8em;
     font-weight: 600;
-    // border-left: 3px solid white;
-    // border-left-style: dotted;
-    text-align: center;
 }
 
 .channelnamediv {
     display: flex;
     justify-content: center;
     align-items: center;
-    // border-left: 1px solid white;
-    text-align: center;
 }
 
 .thumbnailcontainer {
@@ -92,12 +82,3 @@
 .videodescription {
     margin: 0;
 }
-
-// .rightside {
-//     padding: 0;
-//     @include mixins.flex-center;
-// }
-
-// .watchanchor { text-align: right; }
-
-li { list-style-type: none; }
