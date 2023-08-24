@@ -1,10 +1,44 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .App-logo {
-  height: 40vmin;
+  // height: 40vmin;
   pointer-events: none;
+}
+
+.sitecontainer {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  height: 100vh;
+  background-image: url("../assets/magpie.png");
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.bgimage {
+  position: absolute;
+  z-index: -1;
+  width: 50vw;
+  outline: 1px solid red;
+  margin-left: auto;
+}
+
+.backgroundimagecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100px;
+  // width: 100%;
+  outline: 5px solid green;
+  // height: 30rem;
+  height: 100%;
+  overflow: hidden;
+  clear: both;
 }
 
 @media (prefers-reduced-motion: no-preference) {

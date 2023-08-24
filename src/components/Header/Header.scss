@@ -6,19 +6,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $background-color;
 
 
-    border: 1px solid lightgrey;
+        
     padding: .3em .7em 0 .3em;
     
 }
 
 .leftside {
     @include mixins.flex-center;
-
-    h1 {
-        color: $base-color;
-    }
 }
 
 .header {

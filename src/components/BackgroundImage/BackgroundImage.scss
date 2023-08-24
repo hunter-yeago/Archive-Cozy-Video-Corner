@@ -1,0 +1,14 @@
+
+.backgroundimage {
+    position: fixed;
+    z-index: -1;
+    width: 50vw;
+}
+
+.backgroundimagecontainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 10rem;
+    width: 100vw;
+  }

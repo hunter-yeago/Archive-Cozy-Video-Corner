@@ -7,11 +7,11 @@
     height: 80vh;
     width: 3rem;
     border-radius: 5px;
-    outline: 1px solid red;
     position: fixed;
     top: 6.3rem;
     left: 2rem;
-    background-color: config.$maincolor;
+    // background-color: config.$maincolor;
+    background-color: config.$nice-color;
     display: flex;
     flex-direction: column;
 }
@@ -53,7 +53,8 @@
     top: 6.3rem;
     left: 5.5rem;
     display: block;
-    background-color: config.$maincolor;
+    // background-color: config.$maincolor;
+    background-color: config.$nice-color;
     color: white;
     overflow: hidden;
 
