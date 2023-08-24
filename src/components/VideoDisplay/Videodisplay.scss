@@ -6,6 +6,9 @@
     align-items: center;
     flex: 1 1 auto;
     // height: 90vh;
+    // width: max(300px, 57vw);
+    // height: clamp(200px, 300px + 12vw, 600px);
+  
 }
 
 .videoplayer {
@@ -15,6 +18,11 @@
     margin-right: 2em;
     border: 4px solid #3a2a1d;
     // margin-right: clamp(0em, .5em + 1vw, 2em);
+    background-image: url("../../assets/magpie2.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+//   background-position: left 290px center ;
 }
 
 .videoplayerfullsize {

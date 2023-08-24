@@ -4,7 +4,16 @@ export function Videodisplay(props) {
 
     // console.log('firing from video display main function');
     // console.log(props);
-    if (!props.avail) { return (<></>)} 
+    if (!props.avail) { return (
+    <>
+        <div className='shelf'>
+            <div className="videocontainer">
+                <div className='videoplayer'></div>
+            </div>
+        </div>
+    </>
+    )
+} 
     else {
         return(
             <>

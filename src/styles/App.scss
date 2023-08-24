@@ -13,10 +13,11 @@
   display: grid;
   grid-template-rows: 20% 80%;
   height: 100vh;
-  background-image: url("../assets/magpie.png");
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-image: url("../assets/magpie.png");
+  // background-size: 35%;
+  // background-repeat: no-repeat;
+  //Moved over to the right temporarily
+  background-position: bottom 200px right 100px ;
 }
 
 
