@@ -46,7 +46,11 @@
 //Right side panel where things are displayed
 .displaypanel {
     height: 80vh;
-    width: 30rem;
+    // width: 30rem;
+    width: max(300px, 32%);
+    // width: clamp(50px, 20vw + 10%, 50vw);
+    // width: 32vw;
+    // width: clamp(200px, 25px + 20vw, 35vw);
     border-radius: 5px;
     outline: 1px solid black;
     position: fixed;

@@ -36,7 +36,7 @@ export function Searchbar() {
         });
         dispatch(updateVideoListAvailability(true));
         dispatch(updateVideoList(data.items));
-        console.log(data.items);
+        // console.log(data.items);
       })
       .catch(error => {
         console.log('error:');
