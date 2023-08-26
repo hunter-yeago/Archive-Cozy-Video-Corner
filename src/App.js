@@ -23,6 +23,7 @@ function App() {
           <Sidebar />
           <Videodisplay />
 
+{/* New comments */}
           {/* <div className='buttondiv'>
             <button onClick={() => {dispatch(updateContainerSize("videocontainerfullsize"))}}>Full Width</button>
             <button onClick={() => {dispatch(updateContainerSize("videocontainer"))}}>Half and Half</button>
