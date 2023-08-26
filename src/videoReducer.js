@@ -4,7 +4,9 @@ const initialState = {
     // The following is like that as it will render something empty on page load with VideoList
     vids: [],
     windowIsVisible: true,
-    // displayVideo: {},
+    containerSize: {
+        containerSize : "videocontainer"
+    },
 };
 
 const videoReducer = (state = initialState, action) => {
@@ -35,6 +37,12 @@ const videoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 displayVideoAvailable: action.payload
+            }
+
+        case 'UPDATE_VIDEO_CONTAINER_SIZE':
+            return {
+                ...state,
+                containerSize: action.payload
             }
 
         // case 'REMOVE_VIDEOLIST':

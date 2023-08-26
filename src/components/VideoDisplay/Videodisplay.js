@@ -6,18 +6,22 @@ import { updateDisplayVideoAvailability} from '../../actions';
 
 export function Videodisplay(props) {
 
+    console.log(props.size);
+
     const dispatch = useDispatch();
     const [videoContainerSizeClass, updateVideoContainerClass] = useState('videocontainer');
 
     function removeVideo() {
             dispatch(updateDisplayVideoAvailability(false));
     }
+
     if (!props.avail.displayVideoAvailable) { 
         return(
             <>
                 <div className='shelf'>
                     <div className='videoandbuttoncontainer'>
                         <div className={videoContainerSizeClass}>
+                        {/* <div className={props.size.containerSize}> */}
                             <div className='videoplayer'></div>
                         </div>
                         <div className='controlbuttondiv'>
@@ -36,19 +40,19 @@ export function Videodisplay(props) {
                 <div className='shelf'>
                     <div className='videoandbuttoncontainer'>
                         <div className={videoContainerSizeClass}>
+                        {/* <div className={props.size.containerSize}> */}
                             {<iframe className='videoplayer'
                                 title={props.video.vid.snippet.title}
                                 src={`https://www.youtube.com/embed/${props.video.vid.id.videoId}`}
                                 allow="fullscreen"
                                 loading="lazy"
                             ></iframe>}
-
-                    </div>
-                    <div className='controlbuttondiv'>
-                            <button onClick={() => {updateVideoContainerClass('videocontainerfullsize')}}>Full Width</button>
-                            <button onClick={() => {updateVideoContainerClass('videocontainer')}}>Half and Half</button>
-                            <button onClick={removeVideo}>Remove Video</button>
                         </div>
+                        {/* <div className='controlbuttondiv'>
+                                <button onClick={() => {updateVideoContainerClass('videocontainerfullsize')}}>Full Width</button>
+                                <button onClick={() => {updateVideoContainerClass('videocontainer')}}>Half and Half</button>
+                                <button onClick={removeVideo}>Remove Video</button>
+                        </div> */}
                     </div>
                 </div>                
             </>
@@ -59,7 +63,8 @@ export function Videodisplay(props) {
 const mapStateToProps = (state) => {
     return { 
         video: state.displayVideo,
-        avail: state.displayVideoAvailable
+        avail: state.displayVideoAvailable,
+        size: state.containerSize
     };
   }
 

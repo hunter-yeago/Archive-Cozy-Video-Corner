@@ -52,6 +52,16 @@ export const updateVideoListAvailability = (availability) => {
     };
 };
 
+export const updateContainerSize = (size) => {
+    
+    return {
+        type: "UPDATE_VIDEO_CONTAINER_SIZE",
+        payload: {
+            containerSize: size,
+        },
+    };
+};
+
 export const updateVideoURL = (url) => {
     
     return {
