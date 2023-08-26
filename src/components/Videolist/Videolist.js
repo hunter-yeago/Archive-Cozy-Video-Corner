@@ -1,20 +1,12 @@
-import VideoAnchor from "../VideoAnchor";
 import './Videolist.scss';
 import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
 import {updateVideoDisplay, updateDisplayVideoAvailability} from "../../actions";
-import { useEffect } from "react";
 export function Videolist(props) {
 
     const dispatch = useDispatch();
-    // console.log('firing from videolist main');
-    console.log(props);
-    console.log(props.vids.vids);
-
-    
 
     function displayVideo(video) {
-        // console.log('firing display video function');
         dispatch(updateVideoDisplay(video));
         dispatch(updateDisplayVideoAvailability(true));
     }
@@ -28,11 +20,6 @@ export function Videolist(props) {
                         {/* <div className="thumbnailcontainer">
                             <img className='thumbnail' src={video.snippet.thumbnails.default.url}></img>
                         </div> */}
-    
-                        {/* //test div */}
-                        <div></div>
-                        {/* //test div */}
-                        <div></div>
                         
                         <div className="videodetailsdiv">
                             <div className="videonamediv">
