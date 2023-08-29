@@ -1,0 +1,29 @@
+@use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
+
+.outerverticalcontainer {
+    height: 80vh;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    top: 6.3rem;
+    left: 1.5rem;
+    // background-color: config.$maincolor;
+    background-color: config.$nice-color;
+    display: flex;
+    flex-direction: column;
+}
+
+.innervideolistdiv {
+    //These two settings allow for scrolling
+    //More info: https://stackoverflow.com/questions/9811465/scrollable-div-inside-container
+    max-height:100%;
+    overflow:auto;
+    margin-bottom: 50rem;
+}
+
+.marginvideolistdiv {
+    //This allows there to be extra room on the bottom
+    //More info: https://stackoverflow.com/questions/9811465/scrollable-div-inside-container
+    margin-bottom: 4em;
+}
