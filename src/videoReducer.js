@@ -7,6 +7,9 @@ const initialState = {
     containerSize: {
         containerSize : "videocontainer"
     },
+    displayPanelStatus: {
+        displayPanelStatus: "displaypanel",
+    } 
 };
 
 const videoReducer = (state = initialState, action) => {
@@ -44,6 +47,11 @@ const videoReducer = (state = initialState, action) => {
                 ...state,
                 containerSize: action.payload
             }
+        case 'UPDATE_DISPLAY_PANEL_STATUS':
+            return {
+                ...state,
+                displayPanelStatus: action.payload
+        }
 
         // case 'REMOVE_VIDEOLIST':
         //     return {

@@ -32,6 +32,18 @@ export const updateVideoDisplay = (video) => {
     };
 };
 
+export const updateDisplayPanelStatus = (status) => {
+    // console.log('firing upate video display action');
+    return {
+        type: 'UPDATE_DISPLAY_PANEL_STATUS',
+        payload: {
+            displayPanelStatus: status,
+        },
+    };
+};
+
+
+
 export const updateDisplayVideoAvailability = (availability) => {
     
     return {

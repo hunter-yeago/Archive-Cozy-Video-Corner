@@ -2,14 +2,31 @@ import './Videodisplay.scss';
 import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useState } from 'react';
-import { updateDisplayVideoAvailability} from '../../actions';
+import { updateDisplayVideoAvailability, updateDisplayPanelStatus} from '../../actions';
 
 export function Videodisplay(props) {
 
+    //Here's the idea:
+    //In order to get the display to always be "half and half" to speak or go
+    //always have a good ratio between the video display and the side bar display window
+    // I should just have the left side be one div and the right side be another
+    // and then have them in a grid where the left is always 30% and the right 70% or
+    //whatever, and to have the display window just take up whatever is left avaialable
+    // of that 30% div
     console.log(props.size);
 
     const dispatch = useDispatch();
     const [videoContainerSizeClass, updateVideoContainerClass] = useState('videocontainer');
+
+    function showFullSizeVideoDisplay() {
+        updateVideoContainerClass('videocontainerfullsize');
+        dispatch(updateDisplayPanelStatus("hiddenpanel"));
+    }
+
+    function showHalfandHalfVideoDisplay() {
+        updateVideoContainerClass('videocontainer');
+        dispatch(updateDisplayPanelStatus("displaypanel"));
+    }
 
     function removeVideo() {
             dispatch(updateDisplayVideoAvailability(false));
@@ -25,8 +42,8 @@ export function Videodisplay(props) {
                             <div className='videoplayer'></div>
                         </div>
                         <div className='controlbuttondiv'>
-                            <button onClick={() => {updateVideoContainerClass('videocontainerfullsize')}}>Full Width</button>
-                            <button onClick={() => {updateVideoContainerClass('videocontainer')}}>Half and Half</button>
+                            <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
+                            <button onClick={() => {showHalfandHalfVideoDisplay()}}>Half and Half</button>
                             <button onClick={removeVideo}>Remove Video</button>
                         </div>  
                     </div>
@@ -48,11 +65,11 @@ export function Videodisplay(props) {
                                 loading="lazy"
                             ></iframe>}
                         </div>
-                        {/* <div className='controlbuttondiv'>
-                                <button onClick={() => {updateVideoContainerClass('videocontainerfullsize')}}>Full Width</button>
-                                <button onClick={() => {updateVideoContainerClass('videocontainer')}}>Half and Half</button>
-                                <button onClick={removeVideo}>Remove Video</button>
-                        </div> */}
+                        <div className='controlbuttondiv'>
+                            <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
+                            <button onClick={() => {showHalfandHalfVideoDisplay()}}>Half and Half</button>
+                            <button onClick={removeVideo}>Remove Video</button>
+                        </div>
                     </div>
                 </div>                
             </>
