@@ -4,6 +4,21 @@ import Videolist from '../Videolist/Videolist';
 import { connect } from 'react-redux';
 
 export function SearchPanel(props) {
+
+  if (!props.videoListIsAvialable) { 
+    return (
+      <>
+        <div className={props.status}>
+            <Searchbar />
+            <div className="innervideolistdiv" >            
+                <div className="marginvideolistdiv" >
+                    {/* <Videolist /> */}
+                </div>
+            </div>
+        </div>
+      </>
+    )
+  } else {
     return (
       <>
         <div className={props.status}>
@@ -16,6 +31,8 @@ export function SearchPanel(props) {
         </div>
       </>
     )
+  }
+
   }
 
   const mapStateToProps = (state) => {

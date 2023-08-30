@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Videodisplay from './components/VideoDisplay/Videodisplay';
 import './styles/App.scss';
+import ControlBoard from './components/ControlBoard/ControlBoard';
 // import { updateDisplayVideoAvailability } from './actions';
 // import { connect } from 'react-redux';
 // import { useDispatch } from "react-redux";
@@ -20,16 +21,11 @@ function App() {
         </div>
           
         <div className='bodyspace'>
-          <Sidebar />
+          {/* <Sidebar /> */}
+          <ControlBoard />
+          {/* Have to put an empty div here, I think my 
+          Controlboard elements are out of the DOM flow */}
           <Videodisplay />
-
-{/* New comments */}
-{/* New comments */}
-          {/* <div className='buttondiv'>
-            <button onClick={() => {dispatch(updateContainerSize("videocontainerfullsize"))}}>Full Width</button>
-            <button onClick={() => {dispatch(updateContainerSize("videocontainer"))}}>Half and Half</button>
-            <button onClick={() => {dispatch(updateDisplayVideoAvailability(false))}}>Remove Video</button>
-          </div>  */}
 
         </div> 
       </div>

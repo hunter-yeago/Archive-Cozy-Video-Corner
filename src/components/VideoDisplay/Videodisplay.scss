@@ -2,7 +2,7 @@
 
 .shelf {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -24,7 +24,7 @@
 .videocontainerfullsize {
     width: max(300px, 90vw);
     height: clamp(200px, 250px + 18vw, 600px);
-    background-size: clamp(30rem, 70%, 70%);
+    background-size: clamp(24rem, 70%, 70%);
 }
 
 .videocontainer, .videocontainerfullsize {
