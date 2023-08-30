@@ -17,13 +17,14 @@
 .videocontainer {
     width: 57vw;
     height: clamp(200px, 300px + 12vw, 600px);
-    background-size: 75%;
+    // background-size: 75%;
+    background-size: clamp(22rem, 100%, 100%);
 }
 
 .videocontainerfullsize {
     width: max(300px, 90vw);
     height: clamp(200px, 250px + 18vw, 600px);
-    background-size: 50%;
+    background-size: clamp(30rem, 70%, 70%);
 }
 
 .videocontainer, .videocontainerfullsize {
@@ -31,7 +32,7 @@
     background-image: url("../../assets/magpie5.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: clamp(22rem, 100%, 100%);
+    // background-size: clamp(22rem, 100%, 100%);
     margin-right: 2em;
 }
 
