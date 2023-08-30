@@ -10,7 +10,7 @@ export function DisplayPanel(props) {
           {props.panel === "search" ? (
             <SearchPanel />
           ) : props.panel === "info" ? (
-            <InfoPanel />
+            <InfoPanel handler={props.handler}/>
           ) : <div></div>}
         </div>
       </>

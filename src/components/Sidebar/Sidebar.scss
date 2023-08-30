@@ -2,6 +2,7 @@
 @use '../../styles/mixins' as mixins;
 @use '../../styles/config' as config;
 
+//Sidebar buttons
 .barbutton, .barbutton:focus {
     width: 100%;
     text-decoration: none;
@@ -11,15 +12,38 @@
     padding: .5em;
 }
 
+
+.activebarbutton {
+    padding: .5em;
+    border: 1px solid transparent;
+    // border-top-left-radius: 5px;
+    // border-top-right-radius: 5px;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+//Sidebar button hover
+
+//Makes it so that the first button will have the rounded edges
+//on the top when hovered
+.outerverticalcontainer button:first-child:hover {
+    background-color: grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .barbutton:hover {
     background-color: grey;
 }
+
+
 
 .sidebarsvg{
     pointer-events: none;
 }
 
-//Right side panel where things are displayed
+
+//Display Pane.
 .displaypanel {
     height: 80vh;
     // width: 30rem;
@@ -46,3 +70,23 @@
 .hiddenpanel {
     display: none;
 }
+
+.outerverticalcontainer {
+    height: 80vh;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    top: 6.3rem;
+    left: 1.5rem;
+    // background-color: config.$maincolor;
+    background-color: config.$nice-color;
+    display: flex;
+    flex-direction: column;
+}
+
+
+// .outerverticalcontainer:first-child > button:hover {
+//     background-color: grey;
+//     border-top-left-radius: 5px;
+//     border-top-right-radius: 5px;
+// }

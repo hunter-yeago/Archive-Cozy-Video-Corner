@@ -1,0 +1,16 @@
+@use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
+
+.centeredinfopanel {
+    @include mixins.flex-center;
+    flex-direction: column;
+
+    text-align: center;
+    margin: 1em;
+
+    button {
+        width: fit-content;
+        padding: .2em;
+        font-size: 1rem;
+    }
+}
