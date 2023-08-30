@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useState } from 'react';
 import { updateDisplayVideoAvailability, updateDisplayPanelStatus} from '../../actions';
+import magpie from '../../assets/magpie4.png';
 
 export function Videodisplay(props) {
 
@@ -39,7 +40,10 @@ export function Videodisplay(props) {
                     <div className='videoandbuttoncontainer'>
                         <div className={videoContainerSizeClass}>
                         {/* <div className={props.size.containerSize}> */}
-                            <div className='videoplayer'></div>
+                            <div className='videoplayer'>
+                                {/* <img src={magpie} className='pic' /> */}
+                                {/* src/assets/magpie4.png */}
+                            </div>
                         </div>
                         <div className='controlbuttondiv'>
                             <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
