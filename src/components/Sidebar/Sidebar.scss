@@ -15,6 +15,10 @@
     background-color: grey;
 }
 
+.sidebarsvg{
+    pointer-events: none;
+}
+
 //Right side panel where things are displayed
 .displaypanel {
     height: 80vh;

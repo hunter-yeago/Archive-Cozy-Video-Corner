@@ -13,7 +13,6 @@ export function Videodisplay(props) {
     // and then have them in a grid where the left is always 30% and the right 70% or
     //whatever, and to have the display window just take up whatever is left avaialable
     // of that 30% div
-    console.log(props.size);
 
     const dispatch = useDispatch();
     const [videoContainerSizeClass, updateVideoContainerClass] = useState('videocontainer');
