@@ -17,9 +17,7 @@ export function ControlBoard(props) {
     if (props.panelStatus !== display) {
         setDisplay(props.panelStatus);
         
-        //This brings back the 'active selection'
-        //on the sidebar buttons when clicking
-        //full width and half and half buttons in video display
+        //This brings back the 'active selection' on the sidebar buttons when clicking full width and half and half buttons in video display
         if (props.panelStatus === 'displaypanel') {
             setActiveTab(panel);
         } else {
@@ -46,7 +44,7 @@ export function ControlBoard(props) {
     }
 
     return (
-        <div className=''>
+        <div>
             <Sidebar 
                 handler={updatePanelView}
                 tab={activeTab}

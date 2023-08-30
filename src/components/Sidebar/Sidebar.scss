@@ -16,14 +16,11 @@
 .activebarbutton {
     padding: .5em;
     border: 1px solid transparent;
-    // border-top-left-radius: 5px;
-    // border-top-right-radius: 5px;
     border-radius: 5px;
     background-color: grey;
 }
 
 //Sidebar button hover
-
 //Makes it so that the first button will have the rounded edges
 //on the top when hovered
 .outerverticalcontainer button:first-child:hover {
@@ -36,8 +33,6 @@
     background-color: grey;
 }
 
-
-
 .sidebarsvg{
     pointer-events: none;
 }
@@ -46,18 +41,13 @@
 //Display Pane.
 .displaypanel {
     height: 80vh;
-    // width: 30rem;
     width: max(300px, 32%);
-    // width: clamp(50px, 20vw + 10%, 50vw);
-    // width: 32vw;
-    // width: clamp(200px, 25px + 20vw, 35vw);
     border-radius: 5px;
     outline: 1px solid black;
     position: fixed;
     top: 6.3rem;
     left: 5rem;
     display: block;
-    // background-color: config.$maincolor;
     background-color: config.$nice-color;
     color: white;
     overflow: hidden;
@@ -78,15 +68,7 @@
     position: fixed;
     top: 6.3rem;
     left: 1.5rem;
-    // background-color: config.$maincolor;
     background-color: config.$nice-color;
     display: flex;
     flex-direction: column;
 }
-
-
-// .outerverticalcontainer:first-child > button:hover {
-//     background-color: grey;
-//     border-top-left-radius: 5px;
-//     border-top-right-radius: 5px;
-// }

@@ -33,46 +33,42 @@ export function Videodisplay(props) {
 
     if (!props.avail.displayVideoAvailable) { 
         return(
-            <>
-                <div className='shelf'>
-                    <div className='videoandbuttoncontainer'>
-                        <div className={videoContainerSizeClass}>
-                        {/* <div className={props.size.containerSize}> */}
-                            <div className='videoplayer'>
-                            </div>
+            <div className='shelf'>
+                <div className='videoandbuttoncontainer'>
+                    <div className={videoContainerSizeClass}>
+                    {/* <div className={props.size.containerSize}> */}
+                        <div className='videoplayer'>
                         </div>
-                        <div className='controlbuttondiv'>
-                            <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
-                            <button onClick={() => {showHalfandHalfVideoDisplay()}}>Half and Half</button>
-                            <button onClick={removeVideo}>Remove Video</button>
-                        </div>  
                     </div>
+                    <div className='controlbuttondiv'>
+                        <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
+                        <button onClick={() => {showHalfandHalfVideoDisplay()}}>Half and Half</button>
+                        <button onClick={removeVideo}>Remove Video</button>
+                    </div>  
                 </div>
-         </>
+            </div>
         )
     } 
     else {
         return(
-            <>
-                <div className='shelf'>
-                    <div className='videoandbuttoncontainer'>
-                        <div className={videoContainerSizeClass}>
-                        {/* <div className={props.size.containerSize}> */}
-                            {<iframe className='videoplayer'
-                                title={props.video.vid.snippet.title}
-                                src={`https://www.youtube.com/embed/${props.video.vid.id.videoId}`}
-                                allow="fullscreen"
-                                loading="lazy"
-                            ></iframe>}
-                        </div>
-                        <div className='controlbuttondiv'>
-                            <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
-                            <button onClick={() => {showHalfandHalfVideoDisplay()}}>Half and Half</button>
-                            <button onClick={removeVideo}>Remove Video</button>
-                        </div>
+            <div className='shelf'>
+                <div className='videoandbuttoncontainer'>
+                    <div className={videoContainerSizeClass}>
+                    {/* <div className={props.size.containerSize}> */}
+                        {<iframe className='videoplayer'
+                            title={props.video.vid.snippet.title}
+                            src={`https://www.youtube.com/embed/${props.video.vid.id.videoId}`}
+                            allow="fullscreen"
+                            loading="lazy"
+                        ></iframe>}
                     </div>
-                </div>                
-            </>
+                    <div className='controlbuttondiv'>
+                        <button onClick={() => {showFullSizeVideoDisplay()}}>Full Width</button>
+                        <button onClick={() => {showHalfandHalfVideoDisplay()}}>Half and Half</button>
+                        <button onClick={removeVideo}>Remove Video</button>
+                    </div>
+                </div>
+            </div>                
         )
     }
 }

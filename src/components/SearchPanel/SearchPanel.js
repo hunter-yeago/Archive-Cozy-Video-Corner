@@ -7,29 +7,25 @@ export function SearchPanel(props) {
 
   if (!props.videoListIsAvialable) { 
     return (
-      <>
-        <div className={props.status}>
-            <Searchbar />
-            <div className="innervideolistdiv" >            
-                <div className="marginvideolistdiv" >
-                    {/* <Videolist /> */}
-                </div>
-            </div>
-        </div>
-      </>
+      <div className={props.status}>
+          <Searchbar />
+          <div className="innervideolistdiv" >            
+              <div className="marginvideolistdiv" >
+                  {/* <Videolist /> */}
+              </div>
+          </div>
+      </div>
     )
   } else {
     return (
-      <>
-        <div className={props.status}>
-            <Searchbar />
-            <div className="innervideolistdiv" >            
-                <div className="marginvideolistdiv" >
-                    <Videolist />
-                </div>
-            </div>
-        </div>
-      </>
+      <div className={props.status}>
+          <Searchbar />
+          <div className="innervideolistdiv" >            
+              <div className="marginvideolistdiv" >
+                  <Videolist />
+              </div>
+          </div>
+      </div>
     )
   }
 
