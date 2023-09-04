@@ -26,7 +26,6 @@ function App() {
       <div className='headerspace'>
         {/* <Header /> */}
         <ControlBoard />
-        {console.log('firing mobile')}
       </div>
         
       <div className='bodyspace'>     
@@ -41,10 +40,9 @@ function App() {
           
         <div className='bodyspace'>
           <div>
-          <ControlBoard />
+            <ControlBoard />
           </div>
-          
-          {console.log('firing desktop')}
+
           <Videodisplay />
         </div> 
       </div>

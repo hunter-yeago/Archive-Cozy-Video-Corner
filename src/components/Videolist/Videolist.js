@@ -5,6 +5,11 @@ import {updateVideoDisplay, updateDisplayVideoAvailability} from "../../actions"
 export function Videolist(props) {
 
     const dispatch = useDispatch();
+    
+    const idCreater = () => {
+      let uniqueId = () => parseInt(Date.now() * Math.random()).toString();
+      return uniqueId;
+    };
 
     function displayVideo(video) {
         dispatch(updateVideoDisplay(video));
@@ -14,19 +19,22 @@ export function Videolist(props) {
         return(
             <ul className="listcontainer">
                 { props.vids.vids.map(video => (
+                    <li key={video.id.videoId}>
+                        <button onClick={() => displayVideo(video)} className="container">
+                            <div className="videodetailsdiv">
+                                <div className="videonamediv">
+                                    <h1 className="videoname">{video.snippet.title}</h1>
+                                </div>
+                                
+                                <div className="channelnamediv">
+                                    <p className="channelname">{video.snippet.channelTitle}</p>
+                                </div>
+                            </div>
+                                <p className="videodescription">{video.snippet.description}</p>      
+                        </button>
+                    </li>   
 
-                <button onClick={() => displayVideo(video)} className="container">
-                    <div className="videodetailsdiv">
-                        <div className="videonamediv">
-                            <h1 className="videoname">{video.snippet.title}</h1>
-                        </div>
-                        
-                        <div className="channelnamediv">
-                            <p className="channelname">{video.snippet.channelTitle}</p>
-                        </div>
-                    </div>
-                        <p className="videodescription">{video.snippet.description}</p>      
-                </button>
+
                 ))}
             </ul>
         )

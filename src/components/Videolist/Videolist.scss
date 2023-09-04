@@ -7,6 +7,10 @@
     padding: .5em;
     gap: 1em;
     position: relative;
+
+    li {
+        list-style: none;
+    }
 }
 
 .container {
