@@ -1,4 +1,5 @@
 @use 'config' as config;
+@use 'mixins' as mixins;
 
 .App {
   text-align: center;
@@ -10,11 +11,7 @@
   grid-template-columns: 25% 75%;
 
   @media only screen and (max-width: 640px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    // grid-template-columns: 0% 100%;
+    @include mixins.flex-center;
   }
 }
 
@@ -23,17 +20,11 @@
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
-  // display: grid;
-  // align-items: flex-end;
-  // justify-content: center;
-  // grid-template-rows: 50% 50%;
 }
 
 .buttondiv {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flex-center;
   height: 10vh;
 
   button {
@@ -70,10 +61,8 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  @include mixins.flex-center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

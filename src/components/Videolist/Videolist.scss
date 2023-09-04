@@ -7,22 +7,16 @@
     padding: .5em;
     gap: 1em;
     position: relative;
-
-    //this was my first idea to get everything to shrink automatically
-    //as the viewport gets smaller but there's gotta be a better way
-    // max-width: 40vw;
 }
 
 .container {
     outline: 1px solid lightgrey;
-    // width: clamp(8em, 2vw, 10em);
     min-height: 7rem;
     display: flex;
     gap: .2em;
     flex-direction: column;
     border: 1px solid transparent;
     color: white;
-    // background-color: rgb(28, 72, 88);
     background-color: #714b3c;
     border-radius: 5px;
     padding: .5em;
@@ -62,9 +56,7 @@
 }
 
 .channelnamediv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
 }
 
 .thumbnailcontainer {

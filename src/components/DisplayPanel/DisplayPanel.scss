@@ -2,28 +2,21 @@
 @use '../../styles/mixins' as mixins;
 @use '../../styles/config' as config;
 
-//Right side panel where things are displayed
 .displaypanel {
     height: 80vh;
-    // width: 30rem;
-    // width: max(300px, 32%);
     width: clamp(100px, 200px + 15%, 35vw);
-    // width: 32vw;
-    // width: clamp(200px, 25px + 20vw, 35vw);
     border-radius: 5px;
     outline: 1px solid black;
     position: fixed;
     top: 6.3rem;
     left: 5rem;
     display: block;
-    // background-color: config.$maincolor;
     background-color: config.$nice-color;
     color: white;
     overflow: hidden;
 
     @media only screen and (max-width: 640px) {
         top: 6.5rem;
-        // left: 3rem;
         left: unset;
         width: max(80vw, 32%);
 	}

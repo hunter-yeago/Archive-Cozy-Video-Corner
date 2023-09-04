@@ -1,4 +1,5 @@
 @use '../../styles/config' as config;
+@use '../../styles/mixins' as mixins;
 
 .shelf {
     display: flex;
@@ -12,16 +13,13 @@
 }
 
 .videoandbuttoncontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
     flex-direction: column;
 }
 
 .videocontainer {
     width: 57vw;
     height: clamp(200px, 300px + 12vw, 600px);
-    // background-size: 75%;
     background-size: clamp(22rem, 100%, 100%);
 
     @media only screen and (max-width: 640px) {
@@ -42,7 +40,6 @@
     background-image: url("../../assets/magpie5.png");
     background-repeat: no-repeat;
     background-position: center;
-    // background-size: clamp(22rem, 100%, 100%);
     margin-right: 2em;
 
     @media only screen and (max-width: 640px) {

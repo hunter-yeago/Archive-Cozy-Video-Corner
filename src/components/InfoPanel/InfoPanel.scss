@@ -15,7 +15,11 @@
     }
 
     h1 {
-        font-size: max(1.4rem, 1.2rem);
+        font-size: clamp(1rem, 1rem + 3vw, 1.6rem)
+    }
+
+    p {
+        font-size: clamp(.8rem, .8rem + 3vw, 1rem)
     }
 
 }

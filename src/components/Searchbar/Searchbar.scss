@@ -10,7 +10,6 @@
 .innercontainer {
     @include mixins.flex-center;
     gap: .5em;
-    // padding: .5em 0;
     padding: .3em;
 }
 
@@ -20,5 +19,3 @@
     width: 100%;
     min-width: 50%;
 }
-
-// .submitbutton {}
