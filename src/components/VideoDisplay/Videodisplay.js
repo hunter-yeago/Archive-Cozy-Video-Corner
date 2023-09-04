@@ -1,18 +1,10 @@
 import './Videodisplay.scss';
 import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { updateDisplayVideoAvailability, updateDisplayPanelStatus} from '../../actions';
 
 export function Videodisplay(props) {
-
-    //Here's the idea:
-    //In order to get the display to always be "half and half" to speak or go
-    //always have a good ratio between the video display and the side bar display window
-    // I should just have the left side be one div and the right side be another
-    // and then have them in a grid where the left is always 30% and the right 70% or
-    //whatever, and to have the display window just take up whatever is left avaialable
-    // of that 30% div
 
     const dispatch = useDispatch();
     const [videoContainerSizeClass, updateVideoContainerClass] = useState('videocontainer');

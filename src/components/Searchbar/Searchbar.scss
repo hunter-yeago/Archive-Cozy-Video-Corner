@@ -10,11 +10,15 @@
 .innercontainer {
     @include mixins.flex-center;
     gap: .5em;
+    // padding: .5em 0;
+    padding: .3em;
 }
 
 .videoinput {
     background-color: lightgrey;
     line-height: 1.2rem;
+    width: 100%;
+    min-width: 50%;
 }
 
 // .submitbutton {}

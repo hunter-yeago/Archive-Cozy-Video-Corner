@@ -8,10 +8,20 @@
     position: fixed;
     top: 6.3rem;
     left: 1.5rem;
-    // background-color: config.$maincolor;
     background-color: config.$nice-color;
     display: flex;
     flex-direction: column;
+
+
+    @media only screen and (max-width: 640px) {
+		width: 80vw;
+        height: 4rem;
+        top: unset;
+        left: unset;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+	}
 }
 
 .innervideolistdiv {

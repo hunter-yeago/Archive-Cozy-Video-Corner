@@ -8,6 +8,25 @@
 .bodyspace {
   display: grid;
   grid-template-columns: 25% 75%;
+
+  @media only screen and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // grid-template-columns: 0% 100%;
+  }
+}
+
+.headerspace {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  // display: grid;
+  // align-items: flex-end;
+  // justify-content: center;
+  // grid-template-rows: 50% 50%;
 }
 
 .buttondiv {

@@ -6,8 +6,8 @@
 .displaypanel {
     height: 80vh;
     // width: 30rem;
-    width: max(300px, 32%);
-    // width: clamp(50px, 20vw + 10%, 50vw);
+    // width: max(300px, 32%);
+    width: clamp(100px, 200px + 15%, 35vw);
     // width: 32vw;
     // width: clamp(200px, 25px + 20vw, 35vw);
     border-radius: 5px;
@@ -20,6 +20,13 @@
     background-color: config.$nice-color;
     color: white;
     overflow: hidden;
+
+    @media only screen and (max-width: 640px) {
+        top: 6.5rem;
+        // left: 3rem;
+        left: unset;
+        width: max(80vw, 32%);
+	}
 
     a {
         color: white;

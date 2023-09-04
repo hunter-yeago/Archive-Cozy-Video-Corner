@@ -44,7 +44,7 @@ export function ControlBoard(props) {
     }
 
     return (
-        <div>
+        <>
             <Sidebar 
                 handler={updatePanelView}
                 tab={activeTab}
@@ -54,7 +54,7 @@ export function ControlBoard(props) {
             panel={panel}
             handler={updatePanelView}
             />
-        </div>
+        </>
     )
 }
 
