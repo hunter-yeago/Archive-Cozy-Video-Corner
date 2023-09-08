@@ -35,7 +35,8 @@
     background-size: clamp(24rem, 70%, 70%);
 }
 
-.videocontainer, .videocontainerfullsize {
+.videocontainer, 
+.videocontainerfullsize {
     border: .25rem solid #3a2a1d;
     background-image: url("../../assets/magpie5.png");
     background-repeat: no-repeat;
@@ -67,15 +68,15 @@
     height: 10vh;
   
     button {
-      height: 3rem;
-      color: white;
-      background-color: config.$nice-color;
-      border: 1px solid white;
-      border-radius: 5px;
-      min-width: 6rem;
+        height: 3rem;
+        color: white;
+        background-color: config.$nice-color;
+        border: 1px solid white;
+        border-radius: 5px;
+        min-width: 6rem;
     }
   
     button:active, button:hover {
-      background-color: grey;
+        background-color: grey;
     }
   }

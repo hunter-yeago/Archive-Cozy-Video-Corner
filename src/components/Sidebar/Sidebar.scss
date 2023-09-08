@@ -2,96 +2,61 @@
 @use '../../styles/mixins' as mixins;
 @use '../../styles/config' as config;
 
-//Sidebar buttons
-.barbutton, .barbutton:focus {
+.outerverticalcontainer {
+    height: 80vh;
+    width: 3rem;
+    top: 6.3rem;
+    left: 1.5rem;
+    position: fixed;
+    background-color: config.$nice-color;
+    
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    button:first-child{ border-radius: 5px 5px 0px 0px; }
+
+    // Mobile
+    @media only screen and (max-width: 640px) {
+		width: 80vw;
+        height: 4rem;
+        margin-bottom: .5em;
+        top: unset;
+        left: unset;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        button:first-child{ border-radius: 0px}
+        button:last-child{ border-radius: 0px 5px 5px 0px; }
+	}
+}
+
+.barbutton,
+.searchactivebarbutton,
+.infoactivebarbutton {
     width: 100%;
-    max-width: 3rem;
-    text-decoration: none;
-    border: none;
+    height: 100%;
     background: transparent;
     border: 1px solid transparent;
-    padding: .5em;
-    border-left-color: white;
+    max-height: 6rem;
+    border-bottom-color: white;
 
+    // Mobile
     @media only screen and (max-width: 640px) {
-        // width: 100%;
-        max-width: 4rem;
-	}
-    
-}
-
-
-.activebarbutton {
-    width: 100%;
-    max-width: 3rem;
-    padding: .5em;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    background-color: grey;
-
-    @media only screen and (max-width: 640px) {
-        // width: 100%;
+        padding: .5em;
         max-width: 4rem;
         border-left-color: white;
+        border-bottom-color: transparent;
 	}
 }
 
-//Sidebar button hover
-//Makes it so that the first button will have the rounded edges
-//on the top when hovered
-.outerverticalcontainer button:first-child:hover {
-    background-color: grey;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+//Make buttons gray
+.searchactivebarbutton,
+.infoactivebarbutton,
+.barbutton:hover 
+{ background-color: grey; }
 
-.barbutton:hover {
-    background-color: grey;
-}
+//Don't let SVG get clicked
+.sidebarsvg { pointer-events: none; }
 
-.sidebarsvg{
-    pointer-events: none;
-}
-
-
-//Display Pane.
-.displaypanel {
-    height: 80vh;
-    width: max(300px, 32%);
-    border-radius: 5px;
-    outline: 1px solid black;
-    position: fixed;
-    top: 6.3rem;
-    left: 5rem;
-    display: block;
-    background-color: config.$nice-color;
-    color: white;
-    overflow: hidden;
-
-    a {
-        color: white;
-    }
-}
-
-.hiddenpanel {
-    display: none;
-}
-
-// .outerverticalcontainer {
-//     height: 80vh;
-//     width: 3rem;
-//     border-radius: 5px;
-//     position: fixed;
-//     top: 6.3rem;
-//     left: 1.5rem;
-//     background-color: config.$nice-color;
-//     display: flex;
-//     flex-direction: column;
-
-//     @media only screen and (max-width: 640px) {
-// 		width: 80vw;
-//         top: 5rem;
-//         left: 2rem;
-//         height: 3rem;
-// 	}
-// }
+//Hide Display Panel
+.hiddenpanel { display: none; }

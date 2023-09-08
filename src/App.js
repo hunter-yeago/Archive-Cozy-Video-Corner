@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './components/Header/Header';
 import Videodisplay from './components/VideoDisplay/Videodisplay';
 import './styles/App.scss';
 import ControlBoard from './components/ControlBoard/ControlBoard';
