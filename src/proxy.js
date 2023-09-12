@@ -16,9 +16,11 @@ app.use(express.json());
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('index', { name: 'Kyle' })
-})
+//Commenting this out because the heroku deployment overrid the
+//normal website with this
+// app.get('/', (req, res) => {
+//     res.render('index', { name: 'Kyle' })
+// })
 
 //get users
 app.get('/users', (req, res) => {
