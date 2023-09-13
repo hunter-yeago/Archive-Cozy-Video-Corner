@@ -3,6 +3,7 @@ import Searchbar from '../Searchbar/Searchbar';
 import Videolist from '../Videolist/Videolist';
 import { connect } from 'react-redux';
 
+
 export function SearchPanel(props) {
 
   if (!props.videoListIsAvialable) { 
@@ -11,6 +12,7 @@ export function SearchPanel(props) {
           <Searchbar />
           <div className="innervideolistdiv" >            
               <div className="marginvideolistdiv" >
+                
                   {/* <Videolist /> */}
               </div>
           </div>

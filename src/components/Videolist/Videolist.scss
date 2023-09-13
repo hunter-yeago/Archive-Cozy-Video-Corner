@@ -1,4 +1,5 @@
 @use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
 
 .listcontainer {
     margin: clamp(.5em, 2vw, 1em);
@@ -26,8 +27,9 @@
     padding: .5em;
 }
 
-.container:hover {
-    outline: 2px solid #ffc7b0;
+.container:hover,
+.container:focus {
+    outline: 2px solid config.$background-color;
 }
 
 .videodetailsdiv {

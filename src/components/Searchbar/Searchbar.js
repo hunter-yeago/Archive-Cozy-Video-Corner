@@ -5,6 +5,7 @@ import './Searchbar.scss';
 import { updateVideoList, updateVideoListAvailability} from "../../actions";
 // useDispatch allows us to dispatch our updateVideoList action
 import { useDispatch } from "react-redux";
+import searchImage from '../../assets/search.png';
 
 export function Searchbar() {
 
@@ -54,7 +55,8 @@ export function Searchbar() {
           <form onSubmit={handleClick}>
               <div className='innercontainer'>
                   <input type="text" name='searchinput' placeholder='Funny Cat Videos' className='videoinput' value={query} onChange={handleInputChange} />
-                  <button className='submitbutton' type="submit">Search</button>
+                  {/* <img src={searchImage} className='searchicon'></img> */}
+                  {/* <button className='submitbutton' type="submit">Search</button> */}
               </div>
           </form>
       </div>
