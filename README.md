@@ -73,12 +73,11 @@ In this Single Page Application, I used the Model-View-Controller design pattern
 
 **The View updating the screen via the Observer:**
 
-<div style="display: flex; justify-content: center; flex-direction: row; align-items: center;" width=100%>
+<div style="display: flex; justify-content: center; flex-direction: row; align-items: center; outline: 2px solid red;" width=100%>
     <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="40%"/>
     <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="60%"/>
 </div>
-  
-  <img src="">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Optimizations
