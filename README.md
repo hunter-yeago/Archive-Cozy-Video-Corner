@@ -1,7 +1,7 @@
 <div align="center">
 <a name="readme-top" height="0"></a>
   <a href="https://github.com/hyradar/https://simple-video-app-65c11037cb08.herokuapp.com/">
-    <img src="https://github.com/hyradar/CozyVideoCorner/blob/main/ReadMeImages/tanmagpie.png" alt="Study Decks Logo" width="40%" height="40%">
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/tanmagpie.png" alt="Cozy Video Corner Logo" width="40%" height="40%">
   </a>
 
   <p align="center">
