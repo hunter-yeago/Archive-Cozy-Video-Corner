@@ -5,9 +5,7 @@
   </a>
 
   <p align="center">
-    Create and study flashcard decks on StudyDecks! We store your decks locally on your machine for easy access without the hassle of logging in.
-    <br />
-    <a href="https://github.com/hyradar/Cozy-Video-Corner"><strong>Explore the docs »</strong></a>
+    Watch YouTube videos in a cozy, distraction free environment!
     <br />
     <br />
     <a href="https://simple-video-app-65c11037cb08.herokuapp.com/">View Demo</a>
@@ -43,8 +41,6 @@ I've always found recommended videos on YouTube really distracting. So I've deci
 **Creation of a Deck, Studying it, and Resetting user data:**
   <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/searchingvids.gif" alt="Gif of Study Decks Live Demo" width="90vw"/>
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Built With:
@@ -53,17 +49,16 @@ I've always found recommended videos on YouTube really distracting. So I've deci
 <br>
 **Design:** MVC, Observer, Single Page Application
 
-**HTML:**
+**State Management:**
+Redux is used to share state between components that are far from each other in the component tree. Otherwise, the UseState hook is used.
 
-HTML is dynamically rendered with Javascript and focuses on using semantic elements to comply with Web Content Accessibility Guidelines.
+**Responsiveness:** 
 
-**SCSS:** 
+Responsive design with only one media breakpoint. Ternary operator is used in App.JS file to re-render the page based on window size. Mixins and modules were used to follow the DRY principle and reduce file sizes. I used Andy Bell's CSS [Reset](https://andy-bell.co.uk/a-modern-css-reset/) to reduce browser inconsistencies. 
 
-Responsive design without media queries. Mixins and modules were used to follow the DRY principle and reduce file sizes. I used Andy Bell's CSS [Reset](https://andy-bell.co.uk/a-modern-css-reset/) to reduce browser inconsistencies.
+**Proxy Server:** 
 
-**Javascript:** 
-
-I used the WebStorage API to store user decks locally on their device. For form validation I  implemented the Constraint Validation API to display custom error messages for each form input. Upon successful submission of the form, I convert the input values into a data object using the FormData API and send it to the model to create a Deck object. Additionally, I used a function from the date-fns library to ensure that the chosen due-date for the deck is in the future.
+Stuff about Proxy Server
 
 **Resetting user data in local storage:**
   <img src="https://github.com/hyradar/StudyDecks/blob/main/ReadMeImages/resetingdata.gif" alt="Gif showing demo of resetting local storage" width="90vw"/>
@@ -77,7 +72,12 @@ I utilized the Webpack Dev Server for better efficiency when building my project
 In this Single Page Application, I used the Model-View-Controller design pattern as the foundation for the project, and implemented the Observer pattern to update other parts of the page when there is new data to display.
 
 **The View updating the screen via the Observer:**
-  <img src="https://github.com/hyradar/StudyDecks/blob/main/ReadMeImages/addingdeck.gif" alt="Demo of the view updating the screen via the observer pattern" width="90vw"/>
+<div style="display: flex; justify-content: center;">
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="40vw"/>
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="40vw"/>
+</div>
+  
+  <img src="">
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Optimizations
