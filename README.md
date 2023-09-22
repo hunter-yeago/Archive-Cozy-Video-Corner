@@ -41,7 +41,9 @@
 I've always found recommended videos on YouTube really distracting. So I've decided to create a React App which allows the user to watch youtube videos in a cozy environment away from the YouTube site itself so that they can watch content without being tempted by the distracting recommended videos.
 
 **Creation of a Deck, Studying it, and Resetting user data:**
-  <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/searchingvids.gif" alt="Gif of Study Decks Live Demo" width="90vw"/>
+![](https://github.com/Cozy-Video-Corner/ReadMeImages/searchingvids.gif)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
