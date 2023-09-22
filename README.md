@@ -72,8 +72,13 @@ I utilized the Webpack Dev Server for better efficiency when building my project
 In this Single Page Application, I used the Model-View-Controller design pattern as the foundation for the project, and implemented the Observer pattern to update other parts of the page when there is new data to display.
 
 **The View updating the screen via the Observer:**
- <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="90%"/>
-<img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="90%"/>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 300px;" width=100%>
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="40%"/>
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="90%"/>
+</div>
+  
+  <img src="">
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Optimizations
