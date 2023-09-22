@@ -20,7 +20,9 @@ function App() {
 
   return (
     <>
-      {isMobile ? (
+      {
+      isMobile ? 
+      (
       <div className='sitecontainer'>
       <div className='headerspace'>
         {/* <Header /> */}
@@ -31,7 +33,9 @@ function App() {
         <Videodisplay />
       </div> 
     </div>
-      ) : (
+      ) 
+        :
+      (
         <div className='sitecontainer'>
         <div className='headerspace'>
           {/* <Header /> */}
@@ -45,7 +49,8 @@ function App() {
           <Videodisplay />
         </div> 
       </div>
-      )}
+      )
+      }
     </>
   );
 }
