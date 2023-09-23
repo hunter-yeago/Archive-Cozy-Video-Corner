@@ -58,7 +58,7 @@ Responsive design with only one media breakpoint. Ternary operator is used in Ap
 
 <span style="display: flex; justify-content: center; flex-direction: row; align-items: center; border: 2px solid red; background-color: red;" width=100%>
     <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="40%"/>
-    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="50%"/>
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="60%"/>
 </span>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
