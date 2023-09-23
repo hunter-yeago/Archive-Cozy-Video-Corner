@@ -53,15 +53,12 @@ Redux is used to share state between components that are far from each other in 
 
 Responsive design with only one media breakpoint. Ternary operator is used in App.JS file to re-render the page based on window size. Mixins and modules were used to follow the DRY principle and reduce file sizes. I used Andy Bell's CSS [Reset](https://andy-bell.co.uk/a-modern-css-reset/) to reduce browser inconsistencies. 
 
-**Resetting user data in local storage:**
-  <img src="https://github.com/hyradar/StudyDecks/blob/main/ReadMeImages/resetingdata.gif" alt="Gif showing demo of resetting local storage" width="90vw"/>
-
 **The View updating the screen via the Observer:**
 **test**
-<div style="display: flex; justify-content: center; flex-direction: row; align-items: center; border: 2px solid red; background-color: red;" width=100%>
-    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="40%"/>
-    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="60%"/>
-</div>
+<span style="display: flex; justify-content: center; flex-direction: row; align-items: center; border: 2px solid red; background-color: red;" width=100%>
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Mobile.png" alt="Gif showing demo of resetting local storage" width="50%"/>
+    <img src="https://github.com/hyradar/Cozy-Video-Corner/blob/main/ReadMeImages/Desktop.png" alt="Gif showing demo of resetting local storage" width="50%"/>
+</span>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
