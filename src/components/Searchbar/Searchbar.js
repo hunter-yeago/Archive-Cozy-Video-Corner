@@ -1,30 +1,77 @@
-import Videolist from "../Videolist/Videolist";
 import React, { useState } from 'react';
 import './Searchbar.scss';
 
+// Importing the updateVideolist action will allow us to update the VideoList
+import { updateVideoList, updateVideoListAvailability} from "../../actions";
+// useDispatch allows us to dispatch our updateVideoList action
+import { useDispatch } from "react-redux";
+import searchImage from '../../assets/search.png';
+
 export function Searchbar() {
 
-    const [videos, setVideos] = useState([]);
     const [query, setQuery] = useState('');
+    const dispatch = useDispatch();
+
+    function replaceASCII(video) {
+      video.snippet.title = video.snippet.title.replaceAll('&amp;', '&');
+      video.snippet.title = video.snippet.title.replaceAll('&#39;', '\'');
+      video.snippet.title = video.snippet.title.replaceAll('&quot;', '\"');
+      return video;
+    }
   
     let part = 'part=snippet';
-    // let idpart = 'part=snippet,contentDetails,statistics,status';
-    const maxResults = 'maxResults=6';
+    const maxResults = 'maxResults=10';
     const type = 'type=video';
     const fields = 'fields=items%2Fsnippet%2Fthumbnails';
-    // const id = 'id=8xORf5t7vXE';
-  
+
     async function handleClick(event) {
       event.preventDefault();
 
       const url = `api?${part}&${maxResults}&q=${query}&${type}`;
-      // const idurl = `/api?${id}&${idpart}&${type}`;
-      // const testurl = `videos?${part}&${maxResults}&q=${query}&${type}`;
-
-      //   MAIN CODE HERE
+      
       const response = await fetch(url)
       .then(response => response.json())
       .then(data => {
+        data.items.forEach((video) => {
+          video = replaceASCII(video);
+        });
+        dispatch(updateVideoListAvailability(true));
+        dispatch(updateVideoList(data.items));
+        // console.log(data.items);
+      })
+      .catch(error => {
+        console.log('error:');
+        console.log(error);
+      });
+    }
+
+    function handleInputChange(event) {
+      setQuery(event.target.value);
+    }
+
+    return (
+      <>
+      <div className="formcontainer">
+          <form onSubmit={handleClick}>
+              <div className='innercontainer'>
+                  <input type="text" name='searchinput' placeholder='Funny Cat Videos' className='videoinput' value={query} onChange={handleInputChange} />
+                  {/* <img src={searchImage} className='searchicon'></img> */}
+                  {/* <button className='submitbutton' type="submit">Search</button> */}
+              </div>
+          </form>
+      </div>
+    </>    
+    )
+  }
+
+export default Searchbar;
+
+  //old code where I attempted to get access to the video length
+
+    // let idpart = 'part=snippet,contentDetails,statistics,status';
+    // const id = 'id=8xORf5t7vXE';
+      // const idurl = `/api?${id}&${idpart}&${type}`;
+      // const testurl = `videos?${part}&${maxResults}&q=${query}&${type}`;
 
         // const videoIdentifier = data.items[0].id.videoId;
         // console.log(videoIdentifier);
@@ -42,15 +89,6 @@ export function Searchbar() {
         // })
         // console.log(data.items[0].contentDetails.duration);
 
-        //   MAIN CODE HERE
-        console.log(data);
-        setVideos(data.items);
-      })
-      .catch(error => {
-        console.log('error');
-      });
-      
-    }
 
     // async function secondAPICall(secondURL) {
     //   const secondResponse = await fetch(secondURL)
@@ -64,22 +102,3 @@ export function Searchbar() {
     //   console.log('error');
     // });
     // }
-  
-    function handleInputChange(event) {
-      setQuery(event.target.value);
-    }
-
-    return (
-        <>
-            <div className="formcontainer">
-                <form onSubmit={handleClick}>
-                    <div className='innercontainer'>
-                        <input type="text" name='searchinput' placeholder='Funny Cat Videos' className='videoinput' value={query} onChange={handleInputChange} />
-                        <button className='submitbutton' type="submit">Search</button>
-                    </div>
-                </form>
-            </div>   
-            <Videolist vids={videos} />
-        </>      
-    )
-}

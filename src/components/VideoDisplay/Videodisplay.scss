@@ -1,0 +1,82 @@
+@use '../../styles/config' as config;
+@use '../../styles/mixins' as mixins;
+
+.shelf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media only screen and (max-width: 640px) {
+        align-items: center;
+    }
+}
+
+.videoandbuttoncontainer {
+    @include mixins.flex-center;
+    flex-direction: column;
+}
+
+.videocontainer {
+    width: 57vw;
+    height: clamp(200px, 300px + 12vw, 600px);
+    background-size: clamp(22rem, 100%, 100%);
+
+    @media only screen and (max-width: 640px) {
+        width: max(300px, 90vw);
+        height: clamp(200px, 250px + 18vw, 600px);
+        background-size: clamp(24rem, 70%, 70%);
+	}
+}
+
+.videocontainerfullsize {
+    width: max(300px, 90vw);
+    height: clamp(200px, 250px + 18vw, 600px);
+    background-size: clamp(24rem, 70%, 70%);
+}
+
+.videocontainer, 
+.videocontainerfullsize {
+    border: .25rem solid #3a2a1d;
+    background-image: url("../../assets/magpie5.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 2em;
+
+    @media only screen and (max-width: 640px) {
+        margin: 0;
+	}
+}
+
+.pic {
+    width: 100%;
+    height: 100%;
+}
+
+.videoplayer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.controlbuttondiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2em;
+    height: 10vh;
+  
+    button {
+        height: 3rem;
+        color: white;
+        background-color: config.$nice-color;
+        border: 1px solid white;
+        border-radius: 5px;
+        min-width: 6rem;
+    }
+  
+    button:active, button:hover {
+        background-color: grey;
+    }
+  }

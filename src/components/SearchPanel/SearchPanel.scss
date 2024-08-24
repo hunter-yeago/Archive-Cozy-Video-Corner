@@ -1,0 +1,20 @@
+@use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
+
+.innervideolistdiv {
+    //These two settings allow for scrolling
+    //More info: https://stackoverflow.com/questions/9811465/scrollable-div-inside-container
+    max-height:100%;
+    overflow:auto;
+    margin-bottom: 50rem;
+}
+
+.marginvideolistdiv {
+    //This allows there to be extra room on the bottom
+    //More info: https://stackoverflow.com/questions/9811465/scrollable-div-inside-container
+    margin-bottom: 4em;
+}
+
+// .innervideolistdiv:focus {
+//     outline: 0px;
+// }

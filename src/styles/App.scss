@@ -1,10 +1,55 @@
+@use 'config' as config;
+@use 'mixins' as mixins;
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+.bodyspace {
+  display: grid;
+  grid-template-columns: 25% 75%;
+
+  @media only screen and (max-width: 640px) {
+    @include mixins.flex-center;
+  }
+}
+
+.headerspace {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.buttondiv {
+  width: 100%;
+  @include mixins.flex-center;
+  height: 10vh;
+
+  button {
+    height: 3rem;
+    color: white;
+    background-color: config.$nice-color;
+    border: 1px solid white;
+    border-radius: 5px;
+    min-width: 6rem;
+  }
+
+  button:active, button:hover {
+    background-color: grey;
+  }
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
+}
+
+.sitecontainer {
+  display: grid;
+  grid-template-rows: 15% 85%;
+  height: 100vh;
+  background-position: bottom 200px right 100px ;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,10 +61,8 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  @include mixins.flex-center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

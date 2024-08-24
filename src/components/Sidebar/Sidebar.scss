@@ -1,0 +1,62 @@
+
+@use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
+
+.outerverticalcontainer {
+    height: 80vh;
+    width: 3rem;
+    top: 6.3rem;
+    left: 1.5rem;
+    position: fixed;
+    background-color: config.$nice-color;
+    
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    button:first-child{ border-radius: 5px 5px 0px 0px; }
+
+    // Mobile
+    @media only screen and (max-width: 640px) {
+		width: 80vw;
+        height: 4rem;
+        margin-bottom: .5em;
+        top: unset;
+        left: unset;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        button:first-child{ border-radius: 0px}
+        button:last-child{ border-radius: 0px 5px 5px 0px; }
+	}
+}
+
+.barbutton,
+.searchactivebarbutton,
+.infoactivebarbutton {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid transparent;
+    max-height: 6rem;
+    border-bottom-color: white;
+
+    // Mobile
+    @media only screen and (max-width: 640px) {
+        padding: .5em;
+        max-width: 4rem;
+        border-left-color: white;
+        border-bottom-color: transparent;
+	}
+}
+
+//Make buttons gray
+.searchactivebarbutton,
+.infoactivebarbutton,
+.barbutton:hover 
+{ background-color: grey; }
+
+//Don't let SVG get clicked
+.sidebarsvg { pointer-events: none; }
+
+//Hide Display Panel
+.hiddenpanel { display: none; }

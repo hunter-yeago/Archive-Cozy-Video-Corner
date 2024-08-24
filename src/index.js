@@ -4,12 +4,16 @@ import './styles/index.scss';
 // import './styles/reset.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { store } from './store.js'
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>        
+</Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
@@ -17,3 +21,6 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 //test comment
+
+//proxy I removed in order to hopefully make heroku app deployment work
+// "proxy": "http://localhost:8080",

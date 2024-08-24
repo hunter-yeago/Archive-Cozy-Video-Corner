@@ -1,20 +1,43 @@
 @use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
 
 .formcontainer {
 
   @include mixins.flex-center;
-    outline: 1px solid skyblue;
     padding: .5em 0;
+    border-bottom: 1px solid black;
+   
+    form {
+        width: 80%
+    }
 }
 
 .innercontainer {
     @include mixins.flex-center;
     gap: .5em;
+    padding: .3em;
 }
 
 .videoinput {
     background-color: lightgrey;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
+    background-image: url('../../assets/search.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 1.5rem;
+    width: 100%;
 }
 
-// .submitbutton {}
+.videoinput:focus {
+    outline: 1px solid config.$background-color;
+    background-image: url('../../assets/searchfocus.png');
+}
+
+.searchicon {
+    width: 2.5rem;
+    background-color: blue;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}

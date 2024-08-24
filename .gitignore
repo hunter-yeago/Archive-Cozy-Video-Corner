@@ -11,6 +11,9 @@
 # production
 /build
 
+# design
+/src/assets/Affinity Designer 2 files
+
 # misc
 .DS_Store
 .env.local
@@ -28,3 +31,7 @@ notes.txt
 
 # API
 .env
+
+# Vercel
+/vercel
+/.vercel

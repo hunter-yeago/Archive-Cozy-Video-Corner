@@ -1,49 +1,68 @@
 @use '../../styles/mixins' as mixins;
+@use '../../styles/config' as config;
 
 .listcontainer {
-    @include mixins.flex-center;
+    margin: clamp(.5em, 2vw, 1em);
+    display: flex;
     flex-direction: column;
-    padding: 0 .5em;
-    gap: .5em;
+    padding: .5em;
+    gap: 1em;
+    position: relative;
+
+    li {
+        list-style: none;
+    }
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 25% 75%;
     outline: 1px solid lightgrey;
-    width: 100%;
-    height: fit-content;
-    // max-height: 7rem;
-    min-height: 5rem;
+    min-height: 7rem;
+    display: flex;
+    gap: .2em;
+    flex-direction: column;
+    border: 1px solid transparent;
+    color: white;
+    background-color: #714b3c;
+    border-radius: 5px;
+    padding: .5em;
+}
+
+.container:hover,
+.container:focus {
+    outline: 2px solid config.$background-color;
 }
 
 .videodetailsdiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    padding: .3em;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    
 
     p {
-        padding: 0 .5em 0 0;
+        padding: 0;
         margin: 0;
-        // padding: 0;
-        // width: 100%;
-    }
-    
-    a {
-        // width: 100%;
     }
 }
 
 .videoname {
     margin: 0 0 .5em 0;
-    
     font-weight: 600;
+    font-size: 1rem;
+    
+}
+
+.videonamediv {
+    border-right: 1px solid white;
 }
 
 .channelname {
-    width:auto;
-    font-size: .8em;
+    font-weight: 600;
+}
+
+.channelnamediv {
+    @include mixins.flex-center;
 }
 
 .thumbnailcontainer {
@@ -61,12 +80,3 @@
 .videodescription {
     margin: 0;
 }
-
-// .rightside {
-//     padding: 0;
-//     @include mixins.flex-center;
-// }
-
-.watchanchor { text-align: right; }
-
-li { list-style-type: none; }
