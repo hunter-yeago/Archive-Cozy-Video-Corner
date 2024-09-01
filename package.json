@@ -105,7 +105,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "nodemon": "^2.0.22"
   },
   "jest": {
