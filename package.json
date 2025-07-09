@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.17",
     "@reduxjs/toolkit": "^1.9.5",
     "@svgr/webpack": "^5.5.0",
     "@svgr/webpack": "^8.0.1",
@@ -71,7 +71,7 @@
     "terser-webpack-plugin": "^5.2.5",
     "web-vitals": "^2.1.4",
     "webpack": "^5.94.0",
-    "webpack-dev-server": "^4.6.0",
+    "webpack-dev-server": "^5.2.2",
     "webpack-manifest-plugin": "^4.0.2",
     "workbox-webpack-plugin": "^6.4.1"
   },
