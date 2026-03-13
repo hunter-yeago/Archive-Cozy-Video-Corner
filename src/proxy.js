@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit')
-require('dotenv').config()
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` })
 
 const PORT = process.env.PORT || 8080;
 const app = express();

@@ -9,7 +9,9 @@
       "Bash(npx jest:*)",
       "Bash(npm run:*)",
       "Bash(find /Users/hunter/repos/Archive-Cozy-Video-Corner/src -name proxy* -o -name server* -o -name index.js)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(node -e \"console.log\\(require\\(''webpack-dev-server/package.json''\\).version\\)\")",
+      "Bash(node -e \"const paths = require\\(''./config/paths''\\); console.log\\(''publicUrlOrPath:'', paths.publicUrlOrPath\\)\")"
     ]
   }
 }

@@ -114,7 +114,7 @@ checkBrowsers(paths.appPath, isInteractive)
     };
     const devServer = new WebpackDevServer(serverConfig, compiler);
     // Launch WebpackDevServer.
-    devServer.startCallback(() => {
+    devServer.start().then(() => {
       if (isInteractive) {
         clearConsole();
       }
@@ -133,7 +133,7 @@ checkBrowsers(paths.appPath, isInteractive)
 
     ['SIGINT', 'SIGTERM'].forEach(function (sig) {
       process.on(sig, function () {
-        devServer.close();
+        devServer.stop();
         process.exit();
       });
     });
@@ -141,7 +141,7 @@ checkBrowsers(paths.appPath, isInteractive)
     if (process.env.CI !== 'true') {
       // Gracefully exit when stdin ends
       process.stdin.on('end', function () {
-        devServer.close();
+        devServer.stop();
         process.exit();
       });
     }
