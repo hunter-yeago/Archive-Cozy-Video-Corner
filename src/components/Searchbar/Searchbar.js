@@ -5,7 +5,6 @@ import './Searchbar.scss';
 import { updateVideoList, updateVideoListAvailability} from "../../actions";
 // useDispatch allows us to dispatch our updateVideoList action
 import { useDispatch } from "react-redux";
-import searchImage from '../../assets/search.png';
 
 export function Searchbar() {
 
@@ -15,21 +14,19 @@ export function Searchbar() {
     function replaceASCII(video) {
       video.snippet.title = video.snippet.title.replaceAll('&amp;', '&');
       video.snippet.title = video.snippet.title.replaceAll('&#39;', '\'');
-      video.snippet.title = video.snippet.title.replaceAll('&quot;', '\"');
+      video.snippet.title = video.snippet.title.replaceAll('&quot;', '"');
       return video;
     }
   
     let part = 'part=snippet';
     const maxResults = 'maxResults=10';
     const type = 'type=video';
-    const fields = 'fields=items%2Fsnippet%2Fthumbnails';
-
     async function handleClick(event) {
       event.preventDefault();
 
       const url = `api?${part}&${maxResults}&q=${query}&${type}`;
-      
-      const response = await fetch(url)
+
+      await fetch(url)
       .then(response => response.json())
       .then(data => {
         data.items.forEach((video) => {

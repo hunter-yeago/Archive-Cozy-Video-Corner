@@ -6,11 +6,6 @@ export function Videolist(props) {
 
     const dispatch = useDispatch();
     
-    const idCreater = () => {
-      let uniqueId = () => parseInt(Date.now() * Math.random()).toString();
-      return uniqueId;
-    };
-
     function displayVideo(video) {
         dispatch(updateVideoDisplay(video));
         dispatch(updateDisplayVideoAvailability(true));
@@ -48,17 +43,3 @@ const mapStateToProps = (state) => {
   }
 
 export default connect(mapStateToProps)(Videolist);
-
-
-{/* Switch to this when you run out of API calls */}
-{/* <p className="videoname"> A testing video name of a video thing</p>
-<p className="channelname">Channel name</p>
-<p className="videodescription">This is a long message of around 100 characters to show that this is the drescription of a video I found threw the API thanks you very mcuh</p> */}
-
-{/* In order to get this information I need to update my API call */}
-{/* https://stackoverflow.com/questions/27393842/contentdetails-or-duration-not-coming-using-youtube-v3-api */}
-{/* <p>{video.contentDetails.duration}</p> */}
-
-{/* Buttons to send info to console */}
-{/* <button onClick={console.log(video.snippet.thumbnails)}>Button</button> */}
-{/* <button onClick={console.log(Object.keys(video.snippet))}>click</button> */}
