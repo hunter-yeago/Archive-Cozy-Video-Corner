@@ -6,7 +6,10 @@
       "Bash(npm install:*)",
       "Bash(npm outdated:*)",
       "Bash(npm update:*)",
-      "Bash(npx jest:*)"
+      "Bash(npx jest:*)",
+      "Bash(npm run:*)",
+      "Bash(find /Users/hunter/repos/Archive-Cozy-Video-Corner/src -name proxy* -o -name server* -o -name index.js)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }
