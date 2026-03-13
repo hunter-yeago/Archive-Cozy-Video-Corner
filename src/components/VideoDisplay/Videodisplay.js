@@ -1,7 +1,7 @@
 import './Videodisplay.scss';
 import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { updateDisplayVideoAvailability, updateDisplayPanelStatus} from '../../actions';
 
 export function Videodisplay(props) {
