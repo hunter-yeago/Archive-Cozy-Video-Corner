@@ -7,14 +7,13 @@
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.17",
     "@reduxjs/toolkit": "^1.9.5",
-    "@svgr/webpack": "^5.5.0",
     "@svgr/webpack": "^8.0.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "apicache": "^1.6.3",
     "axios": "^1.8.2",
-    "babel-jest": "^27.4.2",
+    "babel-jest": "^30.3.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
     "babel-preset-react-app": "^10.0.1",
@@ -25,7 +24,7 @@
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "cors": "^2.8.5",
     "css-loader": "^6.5.1",
-    "css-minimizer-webpack-plugin": "^3.2.0",
+    "css-minimizer-webpack-plugin": "^8.0.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "ejs": "^3.1.10",
@@ -40,9 +39,10 @@
     "html-webpack-plugin": "^5.5.0",
     "http-proxy-middleware": "^2.0.9",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.4.3",
-    "jest-resolve": "^27.4.2",
-    "jest-watch-typeahead": "^1.0.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "jest-resolve": "^30.3.0",
+    "jest-watch-typeahead": "^3.0.1",
     "mini-css-extract-plugin": "^2.4.5",
     "needle": "^3.2.0",
     "postcss": "^8.4.42",
@@ -105,8 +105,12 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
-    "node-sass": "^9.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.14"
+  },
+  "overrides": {
+    "tar": "^7.5.11",
+    "serialize-javascript": "^7.0.4",
+    "underscore": "^1.13.8"
   },
   "jest": {
     "roots": [
